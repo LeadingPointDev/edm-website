@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Party",
+        "shape": "rect",
+        "name": "party",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            906,
+            19,
+            763,
+            134
+        ],
+        "description": "The Party Subject Area encompasses core information which is common to all Parties. A Party is defined as any Person or Organization who interacts with LPL in one or more roles and who has a Name and at least one method of contact information (such as Address, Phone, and/or Email). Party Roles for a Person include, but are not limited to, Advisor, Licensed Assistant, Non-Licensed Assistant, Investor, and Employee, etc. Party Roles for an Organization include, but are not limited to, Institution, RIA Firm, etc. A Party may play multiple roles as a Person or Organization, but a Party cannot be both a Person and an Organization. This subject area represents a single source of truth for a Party even in cases where multiple roles exist for the same Party, and/or when data is available from multiple sources and needs to be mastered.",
+        "attributes": [
+            "Party ID",
+            "Active Flag",
+            "Onboarding Status",
+            "Party (unique instance of a Person or Organization)",
+            "Person (includes Name, SSN, and Birth Date)",
+            "Organization (includes Name and EIN)",
+            "Party Role",
+            "Party Address",
+            "Party Phone",
+            "Party Email"
+        ],
+        "stakeholders": [
+            "Domain Analysts: Jennifer Andrews",
+            "Domain Modelers: Todd Owens",
+            "Data Product Team: Andrea Allmon, Sam Patel",
+            "Stakeholders and SMEs: To Be Named"
+        ]
+    },
+    {
+        "title": "Prospect",
+        "shape": "rect",
+        "name": "prospect",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            448,
+            92,
+            591,
+            206
+        ]
+    },
+    {
+        "title": "Sponsor",
+        "shape": "rect",
+        "name": "sponsor",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            24,
+            271,
+            167,
+            386
+        ]
+    },
+    {
+        "title": "Practice/Firm",
+        "shape": "rect",
+        "name": "practice",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            199,
+            269,
+            344,
+            384
+        ]
+    },
+    {
+        "title": "Advisor",
+        "shape": "rect",
+        "name": "advisor",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            611,
+            258,
+            755,
+            372
+        ]
+    },
+    {
+        "title": "Advisor Role",
+        "shape": "rect",
+        "name": "advisorrole",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            798,
+            260,
+            943,
+            372
+        ]
+    },
+    {
+        "title": "Client/Investor",
+        "shape": "rect",
+        "name": "clientinvestor",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            997,
+            259,
+            1140,
+            372
+        ]
+    }
+]
