@@ -10,7 +10,7 @@ import Standards from "./Components/Standards";
 
 function App() {
   return (
-    <BrowserRouter basename="/edm-website/">
+    <BrowserRouter>
       <div class="container">
         <Navbar />
         <Routes>

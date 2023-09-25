@@ -13,6 +13,8 @@ const Modal = ({ area, onClose }) => {
                     Close
                 </button>
                 <h2>{area.title}</h2>
+                <a href={area.waltz}>Waltz Link</a>
+                <a href={area.confluence}>Confluence Link</a>
                 <h3>Description</h3>
                 <p>{area.description}</p>
                 <h3>Attributes</h3>

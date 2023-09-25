@@ -29,7 +29,9 @@
             "Domain Modelers: Todd Owens",
             "Data Product Team: Andrea Allmon, Sam Patel",
             "Stakeholders and SMEs: To Be Named"
-        ]
+        ],
+        "waltz": "http://10.124.192.192:8443/data-types/100001",
+        "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59820901476"
     },
     {
         "title": "Prospect",
@@ -81,7 +83,17 @@
             258,
             755,
             372
-        ]
+        ],
+        "description": "The Advisor Subject Area encompasses the information specific to the following roles: Advisor, Advisor Prospect, Licensed Assistant, Non-licensed Assistant, Branch, Institution, RIA Firm, Broker Dealer, and other associated persons and entities who provide investment support.",
+        "attributes": [
+            "Party ID",
+            "CRD and/or NPN",
+            "License and Registration Details",
+            "Affiliation Details",
+            "Core Party Data"
+        ],
+        "waltz": "http://10.124.192.192:8443/data-types/1",
+        "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59713716465"
     },
     {
         "title": "Advisor Role",
@@ -107,6 +119,158 @@
             259,
             1140,
             372
+        ],
+        "description": "The Investor Subject Area encompasses Individuals or Entities with an investment relationship with the firm, including Investor Prospects as well as those Investors who have any role on an Account.",
+        "attributes": [
+            "Contract ID",
+            "Party IDs (Advisor/Firm Role",
+            "Party Roles and Status",
+            "Core Party Data"
+        ],
+        "waltz": "http://10.124.192.192:8443/data-types/2",
+        "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59882864897"
+    },
+    {
+        "title": "Contract Details",
+        "shape": "rect",
+        "name": "contractdetails",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            389,
+            421,
+            531,
+            535
+        ],
+        "description": "",
+        "attributes": [],
+        "stakeholders": [],
+        "waltz": "",
+        "confluence": ""
+    },
+    {
+        "title": "Contract",
+        "shape": "rect",
+        "name": "contract",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            609,
+            420,
+            754,
+            533
+        ],
+        "description": "",
+        "attributes": [],
+        "stakeholders": [],
+        "waltz": "",
+        "confluence": ""
+    },
+    {
+        "title": "Account",
+        "shape": "rect",
+        "name": "account",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            998,
+            419,
+            1137,
+            534
+        ],
+        "description": "The Account Subject Area encompasses the details specific to all types of Investment Accounts, including custodied brokerage and advisory accounts, direct business accounts, TAMP accounts, and bank trust accounts.",
+        "attributes": [
+            "Account ID",
+            "Account ID",
+            "Investor IDs",
+            "Advisor IDs",
+            "Contract IDs",
+            "Core Account Data"
+        ],
+        "waltz": "http://10.124.192.192:8443/data-types/3",
+        "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59882569935"
+    },
+    {
+        "title": "Position",
+        "shape": "rect",
+        "name": "position",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            1209,
+            475,
+            1350,
+            590
         ]
+    },
+    {
+        "title": "Legal Entity",
+        "shape": "rect",
+        "name": "legalentity",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            386,
+            583,
+            533,
+            697
+        ]
+    },
+    {
+        "title": "Service",
+        "shape": "rect",
+        "name": "service",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            762,
+            663,
+            905,
+            776
+        ],
+        "waltz": "http://10.124.192.192:8443/data-types/7"
+    },
+    {
+        "title": "Instrument/Product",
+        "shape": "rect",
+        "name": "instrumentproduct",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            964,
+            661,
+            1107,
+            775
+        ],
+        "description": "The Product Subject Area encompasses the information specific to investable financial securities in all asset classes.",
+        "attributes": [
+            "Instrument ID",
+            "Instrument Type",
+            "Product Classification"
+        ],
+        "stakeholders": [],
+        "waltz": "http://10.124.192.192:8443/data-types/6",
+        "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59961410270"
+    },
+    {
+        "title": "Transaction",
+        "shape": "rect",
+        "name": "transaction",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            1207,
+            661,
+            1347,
+            777
+        ],
+        "description": "",
+        "attributes": [
+            "Transaction ID",
+            "Account ID",
+            "Instrument ID",
+            "Core Transaction Data"
+        ],
+        "waltz": "http://10.124.192.192:8443/data-types/5"
     }
 ]
