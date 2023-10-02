@@ -67,3 +67,11 @@ a:hover {
 .modal-close-button:hover {
   color: #000;
 }
+
+.quicklinks {
+  border: 1px solid black;
+  height: 100%;
+  font-size: 12px;
+  min-width: 15vw;
+  padding: 0.5em;
+}

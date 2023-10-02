@@ -7,6 +7,7 @@ import Edm from "./Components/Edm";
 import Architecture from "./Components/Architecture";
 import Granite from "./Components/Granite";
 import Standards from "./Components/Standards";
+import QuickLinks from "./Components/QuickLinks";
 
 function App() {
   return (
@@ -14,12 +15,12 @@ function App() {
       <div class="container">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/roadmap" element={<Roadmap />} />
-          <Route path="/edm" element={<Edm />} />
-          <Route path="/architecture" element={<Architecture />} />
-          <Route path="/granite" element={<Granite />} />
-          <Route path="/standards" element={<Standards />} />
+          <Route path="/" element={<div class="container"><Landing /><QuickLinks /></div>} />
+          <Route path="/roadmap" element={<div class="container"><Roadmap /><QuickLinks /></div>} />
+          <Route path="/edm" element={<div class="container"><Edm /><QuickLinks /></div>} />
+          <Route path="/architecture" element={<div class="container"><Architecture /><QuickLinks /></div>} />
+          <Route path="/granite" element={<div class="container"><Granite /><QuickLinks /></div>} />
+          <Route path="/standards" element={<div class="container"><Standards /><QuickLinks /></div>} />
         </Routes>
       </div>
     </BrowserRouter>
