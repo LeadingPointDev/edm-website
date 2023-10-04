@@ -3,7 +3,7 @@ import Mapper from "./Mapper";
 function Edm() {
     return (
         <div>
-            <h2>Data Foundatino: Enterprise Data Model Level 1 (Subject Area Model)</h2>
+            <h2>Data Foundation: Enterprise Data Model Level 1 (Subject Area Model)</h2>
             <p>A consistent, well defined and understood set of Enterprise Data Models (EDMs)
                 is critical to the strategic data objectives and realizing the 'Treat Me Like a Business’ TMLB
                 and Hyper-Personalisation objectives out of the major Granite investment.</p>
