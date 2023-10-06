@@ -32,8 +32,8 @@ function Landing() {
                     data quality framework.</li>
             </ul>
 
-            <h3>Data Foundation Tenants</h3>
-            <p>The strategy and delivery roadmap is based on four fundamental tenants of enterprise data:</p>
+            <h3>Data Foundation Tenets</h3>
+            <p>The strategy and delivery roadmap is based on four fundamental tenets of enterprise data:</p>
             <p>Control: Democratised and embedded up front data governance, with platform enforced controls, protection and provisioning</p>
             <p>Available: A comprehensive single point of meaningful verified data on a self-service basis, with supporting catalogue,
                 lineage and business definition</p>
