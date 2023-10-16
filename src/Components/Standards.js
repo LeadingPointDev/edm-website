@@ -20,10 +20,21 @@ function Standards() {
             </ul>
             <p>Data Policy & Standards</p>
             <ul>
-                <li>Data Security Policies</li>
-                <li>Data Classification and Sensitivity</li>
-                <li>Data Retention and Archiving Policies</li>
-                <li>Data Privacy Compliance Documentation</li>
+                <li><a href="http://sharepoint.corp.lpl.com/site/E/EnterpriseDataGovernance/Shared%20Documents/Enterprise%20Data%20Governance%20Policy.pdf"
+                    style={{ color: "blue", padding: 0, border: 0 }}>Enterprise Data Governance Policy</a>
+                </li>
+                <li><a href="http://sharepoint.corp.lpl.com/site/E/EnterpriseDataGovernance/Shared%20Documents/Enterprise%20Data%20Catalog%20Standard.pdf"
+                    style={{ color: "blue", padding: 0, border: 0 }}>Enterprise Data Catalog Standard</a>
+                </li>
+                <li><a href="http://sharepoint.corp.lpl.com/site/E/EnterpriseDataGovernance/Shared%20Documents/Enterprise%20Data%20Governance%20Asset%20Designation%20Standard.pdf"
+                    style={{ color: "blue", padding: 0, border: 0 }}>Enterprise Data Governance Asset Designation Standard</a>
+                </li>
+                <li><a href="http://sharepoint.corp.lpl.com/site/E/EnterpriseDataGovernance/Shared%20Documents/Enterprise%20Data%20Governance%20Classification%20&%20Sensitivity%20Standard.pdf"
+                    style={{ color: "blue", padding: 0, border: 0 }}>Enterprise Data Governance Classification & Sensitivity Standard</a>
+                </li>
+                <li><a href="http://sharepoint.corp.lpl.com/site/E/EnterpriseDataGovernance/Shared%20Documents/Enterprise%20Data%20Quality%20Standard.pdf"
+                    style={{ color: "blue", padding: 0, border: 0 }}>Enterprise Data Quality Standard</a>
+                </li>
             </ul>
             <p>Data Disaster Recovery and Business Continuity Plans</p>
             <p>Data Training and Documentation for Consumers</p>

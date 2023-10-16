@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/edm-website/static/css/main.aa63cebb.css",
-    "main.js": "/edm-website/static/js/main.f85264c8.js",
+    "main.js": "/edm-website/static/js/main.d2bd3b1b.js",
     "static/media/roadmap.png": "/edm-website/static/media/roadmap.68893b3d8a7ff3cfa654.png",
     "static/media/granite.png": "/edm-website/static/media/granite.d2bfa3e1e5e7e32ec5e9.png",
     "static/media/edm.png": "/edm-website/static/media/edm.4d8c47365f88bf658cd5.png",
@@ -9,10 +9,10 @@
     "static/media/arch2.png": "/edm-website/static/media/arch2.996e4fa8fe88a0af6255.png",
     "index.html": "/edm-website/index.html",
     "main.aa63cebb.css.map": "/edm-website/static/css/main.aa63cebb.css.map",
-    "main.f85264c8.js.map": "/edm-website/static/js/main.f85264c8.js.map"
+    "main.d2bd3b1b.js.map": "/edm-website/static/js/main.d2bd3b1b.js.map"
   },
   "entrypoints": [
     "static/css/main.aa63cebb.css",
-    "static/js/main.f85264c8.js"
+    "static/js/main.d2bd3b1b.js"
   ]
 }
