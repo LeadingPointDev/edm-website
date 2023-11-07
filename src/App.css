@@ -76,33 +76,38 @@ a:hover {
   padding: 0.5em;
 }
 
-.table-container {
-  display: flex;
-  justify-content: center;
-}
-
 .table {
-  border-collapse: collapse;
-  width: 80%;
-  max-width: 600px;
+  width: 100%;
 }
 
-th,
-td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: left;
+.arrow-cell {
+  width: 30%;
 }
 
-th {
-  background-color: #f2f2f2;
+.explanation-cell {
+  width: 70%;
+  padding: 10px;
+}
+
+.arrow {
+  background-color: #0070A3;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.arrow-text {
+  flex: 1;
+  text-align: center;
+  color: white;
   font-weight: bold;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #ddd;
+.arrow-tail {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #F36D26;
 }

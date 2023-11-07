@@ -40,18 +40,21 @@ const data = [
 
 const Outcomes = () => {
     return (
-        <div className="table-container">
-            <table className="table">
-                <tbody>
-                    {data.map((item, index) => (
-                        <tr key={index}>
-                            <td>{item.topic}</td>
-                            <td>{item.explanation}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+        <table className="table">
+            <tbody>
+                {data.map((item, index) => (
+                    <tr key={index}>
+                        <td className="arrow-cell">
+                            <div className="arrow">
+                                <div className="arrow-text">{item.topic}</div>
+                                <div className="arrow-tail"></div>
+                            </div>
+                        </td>
+                        <td className="explanation-cell">{item.explanation}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
     );
 };
 
