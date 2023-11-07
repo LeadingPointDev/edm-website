@@ -5,6 +5,7 @@ function Navbar() {
         <div class="navbar-container">
             <Link to="/">Landing</Link>
             <Link to="/roadmap">Delivery Roadmap</Link>
+            <Link to="/outcomes">Outcomes & Impacts</Link>
             <Link to="/edm">Enterprise Data Model</Link>
             <Link to="/architecture">Architecture</Link>
             <Link to="/granite">Project Granite</Link>

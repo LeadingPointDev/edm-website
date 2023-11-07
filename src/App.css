@@ -75,3 +75,34 @@ a:hover {
   min-width: 15vw;
   padding: 0.5em;
 }
+
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 600px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}

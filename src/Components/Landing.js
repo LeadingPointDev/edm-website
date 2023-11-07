@@ -2,6 +2,22 @@ function Landing() {
     return (
         <div>
             <h2>Data Foundation: data as a strategic asset</h2>
+            <h3>Importance to LPL Financial</h3>
+            <p>Data is simply information about our clients, products, services, and the financial
+                market that we operate in.​</p>
+            <ul>
+                <li>Accurate, complete and timely data along with platforms, processes and people
+                    that govern, manage and analyze data are vital to LPL Financial for ensuring
+                    excellent and personalized client service, innovating and managing investment
+                    products, ensuring compliance and security, optimizing operations, and making
+                    strategic decisions that drive the organization’s growth and success in the highly
+                    competitive financial industry.</li>
+                <li>Data serves as the foundational element that underpins LPL Financial’s ability to
+                    provide high-quality advisor service, it is an essential resource that supports
+                    the organization’s core functions and strategic initiatives.</li>
+
+            </ul>
+            <br></br>
             <p>The objective is to delivering all data needs through a dedicated data
                 organisation and platform as a firmwide strategic enabler.</p>
             <ul>

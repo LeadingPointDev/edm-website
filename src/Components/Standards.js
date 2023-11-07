@@ -10,6 +10,7 @@ function Standards() {
                     flow breaks. All of which currently led to significant data quality problems in Account Balances,
                     VoT, AUM, ClientWorks leading to problems for our Advisors and Clients.</li>
             </ul>
+            <p>Please visit the Enterprise Data Governance site for full details, key documents linked below:</p>
             <p>Data Foundation</p>
             <ul>
                 <li>Data Foundation Design Principles</li>
