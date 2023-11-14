@@ -111,3 +111,18 @@ a:hover {
   border-bottom: 20px solid transparent;
   border-left: 20px solid #F36D26;
 }
+
+.orange {
+  color: #F36D26
+}
+
+.title {
+  background: #0070A3;
+  color: white;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.image {
+  width: 60vw;
+}

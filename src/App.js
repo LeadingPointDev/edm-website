@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 import Navbar from "./Components/Navbar";
-import Landing from "./Components/Landing";
+import Introduction from "./Components/Introduction";
 import Roadmap from "./Components/Roadmap";
 import Edm from "./Components/Edm";
-import Outcomes from "./Components/Outcomes";
 import Architecture from "./Components/Architecture";
 import Granite from "./Components/Granite";
 import Standards from "./Components/Standards";
@@ -16,9 +15,8 @@ function App() {
       <div class="container">
         <Navbar />
         <Routes>
-          <Route path="/" element={<div class="container"><Landing /><QuickLinks /></div>} />
+          <Route path="/" element={<div class="container"><Introduction /><QuickLinks /></div>} />
           <Route path="/roadmap" element={<div class="container"><Roadmap /><QuickLinks /></div>} />
-          <Route path="/outcomes" element={<div class="container"><Outcomes /><QuickLinks /></div>} />
           <Route path="/edm" element={<div class="container"><Edm /><QuickLinks /></div>} />
           <Route path="/architecture" element={<div class="container"><Architecture /><QuickLinks /></div>} />
           <Route path="/granite" element={<div class="container"><Granite /><QuickLinks /></div>} />
