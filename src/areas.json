@@ -6,10 +6,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            906,
+            724,
             19,
-            763,
-            134
+            908,
+            121
         ],
         "description": "The Party Subject Area encompasses core information which is common to all Parties. A Party is defined as any Person or Organization who interacts with LPL in one or more roles and who has a Name and at least one method of contact information (such as Address, Phone, and/or Email). Party Roles for a Person include, but are not limited to, Advisor, Licensed Assistant, Non-Licensed Assistant, Investor, and Employee, etc. Party Roles for an Organization include, but are not limited to, Institution, RIA Firm, etc. A Party may play multiple roles as a Person or Organization, but a Party cannot be both a Person and an Organization. This subject area represents a single source of truth for a Party even in cases where multiple roles exist for the same Party, and/or when data is available from multiple sources and needs to be mastered.",
         "attributes": [
@@ -40,10 +40,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            448,
-            92,
-            591,
-            206
+            489,
+            18,
+            673,
+            138
         ]
     },
     {
@@ -53,10 +53,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            24,
-            271,
-            167,
-            386
+            20,
+            188,
+            202,
+            281
         ]
     },
     {
@@ -66,10 +66,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            199,
-            269,
-            344,
-            384
+            254,
+            189,
+            437,
+            281
         ]
     },
     {
@@ -79,10 +79,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            611,
-            258,
-            755,
-            372
+            489,
+            188,
+            673,
+            307
         ],
         "description": "The Advisor Subject Area encompasses the information specific to the following roles: Advisor, Advisor Prospect, Licensed Assistant, Non-licensed Assistant, Branch, Institution, RIA Firm, Broker Dealer, and other associated persons and entities who provide investment support.",
         "attributes": [
@@ -102,10 +102,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            798,
-            260,
-            943,
-            372
+            723,
+            188,
+            908,
+            323
         ]
     },
     {
@@ -115,10 +115,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            997,
-            259,
-            1140,
-            372
+            960,
+            188,
+            1144,
+            309
         ],
         "description": "The Investor Subject Area encompasses Individuals or Entities with an investment relationship with the firm, including Investor Prospects as well as those Investors who have any role on an Account.",
         "attributes": [
@@ -137,10 +137,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            389,
-            421,
-            531,
-            535
+            254,
+            378,
+            438,
+            513
         ],
         "description": "",
         "attributes": [],
@@ -155,10 +155,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            609,
-            420,
-            754,
-            533
+            489,
+            378,
+            673,
+            481
         ],
         "description": "",
         "attributes": [],
@@ -173,10 +173,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            998,
-            419,
-            1137,
-            534
+            959,
+            376,
+            1144,
+            496
         ],
         "description": "The Account Subject Area encompasses the details specific to all types of Investment Accounts, including custodied brokerage and advisory accounts, direct business accounts, TAMP accounts, and bank trust accounts.",
         "attributes": [
@@ -197,10 +197,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            1209,
-            475,
-            1350,
-            590
+            1196,
+            377,
+            1379,
+            481
         ]
     },
     {
@@ -210,10 +210,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            386,
-            583,
-            533,
-            697
+            254,
+            580,
+            438,
+            687
         ]
     },
     {
@@ -223,10 +223,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            762,
-            663,
-            905,
-            776
+            724,
+            579,
+            908,
+            688
         ],
         "waltz": "http://10.124.192.192:8443/data-types/7"
     },
@@ -237,10 +237,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            964,
-            661,
-            1107,
-            775
+            959,
+            579,
+            1144,
+            699
         ],
         "description": "The Product Subject Area encompasses the information specific to investable financial securities in all asset classes.",
         "attributes": [
@@ -259,10 +259,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            1207,
-            661,
-            1347,
-            777
+            1196,
+            581,
+            1378,
+            684
         ],
         "description": "",
         "attributes": [

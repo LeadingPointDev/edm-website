@@ -12,15 +12,15 @@ import QuickLinks from "./Components/QuickLinks";
 function App() {
   return (
     <BrowserRouter basename="/edm-website/">
-      <div class="container">
+      <div className="container">
         <Navbar />
         <Routes>
-          <Route path="/" element={<div class="container"><Introduction /><QuickLinks /></div>} />
-          <Route path="/roadmap" element={<div class="container"><Roadmap /><QuickLinks /></div>} />
-          <Route path="/edm" element={<div class="container"><Edm /><QuickLinks /></div>} />
-          <Route path="/architecture" element={<div class="container"><Architecture /><QuickLinks /></div>} />
-          <Route path="/granite" element={<div class="container"><Granite /><QuickLinks /></div>} />
-          <Route path="/standards" element={<div class="container"><Standards /><QuickLinks /></div>} />
+          <Route path="/" element={<div className="container"><Introduction /><QuickLinks /></div>} />
+          <Route path="/roadmap" element={<div className="container"><Roadmap /><QuickLinks /></div>} />
+          <Route path="/edm" element={<div className="container"><Edm /><QuickLinks /></div>} />
+          <Route path="/architecture" element={<div className="container"><Architecture /><QuickLinks /></div>} />
+          <Route path="/granite" element={<div className="container"><Granite /><QuickLinks /></div>} />
+          <Route path="/standards" element={<div className="container"><Standards /><QuickLinks /></div>} />
         </Routes>
       </div>
     </BrowserRouter>

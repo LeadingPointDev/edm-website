@@ -126,3 +126,40 @@ a:hover {
 .image {
   width: 60vw;
 }
+
+.dropdown-container {
+  background: #091334;
+  color: lightgrey;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+#useCase {
+  background: #FFD05C;
+  color: #0F1D4B;
+  font-weight: bold;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.onboarding-step-container {
+  display: flex;
+  gap: 5px;
+}
+
+.onboarding-step {
+  font-size: 12px;
+  color: lightgrey;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  background-color: #2f4488;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.5s ease;
+}
+
+.onboarding-step-selected {
+  background-color: #CCE3FF;
+  color: #0F1D4B;
+}

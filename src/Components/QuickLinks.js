@@ -1,6 +1,6 @@
 function QuickLinks() {
     return (
-        <div class="quicklinks">
+        <div className="quicklinks">
             <h3>Quick Links</h3>
             <p>Subject Area Model (ESAM)</p>
             <ul>

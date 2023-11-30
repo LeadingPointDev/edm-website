@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
-        <div class="navbar-container">
+        <div className="navbar-container">
             <Link to="/">Introduction</Link>
             <Link to="/roadmap">Roadmap</Link>
             <Link to="/edm">Data Model</Link>
