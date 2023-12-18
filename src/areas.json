@@ -6,23 +6,204 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            724,
-            19,
-            908,
-            121
+            416,
+            18,
+            629,
+            159
         ],
         "description": "The Party Subject Area encompasses core information which is common to all Parties. A Party is defined as any Person or Organization who interacts with LPL in one or more roles and who has a Name and at least one method of contact information (such as Address, Phone, and/or Email). Party Roles for a Person include, but are not limited to, Advisor, Licensed Assistant, Non-Licensed Assistant, Investor, and Employee, etc. Party Roles for an Organization include, but are not limited to, Institution, RIA Firm, etc. A Party may play multiple roles as a Person or Organization, but a Party cannot be both a Person and an Organization. This subject area represents a single source of truth for a Party even in cases where multiple roles exist for the same Party, and/or when data is available from multiple sources and needs to be mastered.",
-        "attributes": [
-            "Party ID",
-            "Active Flag",
-            "Onboarding Status",
-            "Party (unique instance of a Person or Organization)",
-            "Person (includes Name, SSN, and Birth Date)",
-            "Organization (includes Name and EIN)",
-            "Party Role",
-            "Party Address",
-            "Party Phone",
-            "Party Email"
+        "concepts": [
+            {
+                "name": "Party",
+                "attributes": [
+                    {
+                        "name": "Party End Date",
+                        "definition": "The Party End Date is the date on which a person or organization is no longer active in any role in LPL."
+                    },
+                    {
+                        "name": "Party Start Date",
+                        "definition": "The Party Start Date is the date on which a person or organization is first known to LPL in any role."
+                    },
+                    {
+                        "name": "Party Type Code",
+                        "definition": "The Party Type Code is a means to identify a specific party as either a person or an organization."
+                    },
+                    {
+                        "name": "Party UID",
+                        "definition": "The Party UID is an identifier that is assigned to a person or an organization to uniquely identify them."
+                    },
+                    {
+                        "name": "Taxpayer ID Number",
+                        "definition": "The Taxpayer Identification Number (TIN) is an identification number used by the Internal Revenue Service (IRS) in the administration of tax laws. A Social Security number (SSN) is issued by the Social Security Administration, whereas all other TINs are issued by the IRS."
+                    },
+                    {
+                        "name": "Taxpayer ID Type Code",
+                        "definition": "The Taxpayer ID Type Code is a means to identify the specific type of taxpayer identification number associated with an individual person and/or organization."
+                    }
+                ]
+            },
+            {
+                "name": "Party Address",
+                "attributes": [
+                    {
+                        "name": "City Name",
+                        "definition": "The City Name is the designator for a place name, a second level geopolitical area accepted by the specific postal authority, such as the United States Postal Service (USPS), where the first level geopolitical area is State Code, and may be associated with a Postal Code. The USPS designates one preferred place name for each ZIP Code."
+                    },
+                    {
+                        "name": "Country Code",
+                        "definition": "The Country Code is a means to uniquely identify a country, a region that is identified as a distinct sovereign entity and geopolitical area. An ISO 3166 Alpha-2 code (“US”) will be utilized for the representation of a country code."
+                    },
+                    {
+                        "name": "Delivery Line 1 Text",
+                        "definition": "The Delivery Line 1 Text is a group of attributes that consists of Primary Address Number, Pre-directional Code (optional), Street Name, Street Suffix Code, Post-directional Code (optional), Secondary Address Designator/Identifier Code (optional), Secondary Address Number (optional). Alternatively, the recipient may use a PO Box instead of these parts in certain contexts."
+                    },
+                    {
+                        "name": "Delivery Line 2 Text",
+                        "definition": "The Address Line 2 Text is a group of attributes, as an overflow from Delivery Line 1 Text, that consists of Secondary Address Designator(s)/Identifier(s), Secondary Address Number(s). It's rarely used."
+                    },
+                    {
+                        "name": "Party Address End Date",
+                        "definition": "The Party Address End Date is the date on which an Address of a certain Type is no longer associated with a Party."
+                    },
+                    {
+                        "name": "Party Address Start Date",
+                        "definition": "The Party Address Start Date is the date on which an Address of a certain Type first became associated with a Party."
+                    },
+                    {
+                        "name": "Party Address UID",
+                        "definition": "The Party Address UID is a surrogate key attribute that identifies an instance of an Address for a Party."
+                    },
+                    {
+                        "name": "Postal Code",
+                        "definition": "The Postal Code is a series of letters, or digits, or both (sometimes including spaces and/or punctuation) that is associated with a geographical area or large institution that receives volumes of mail. It is utilized as part of an address to aid in the sorting of mail."
+                    },
+                    {
+                        "name": "State Code",
+                        "definition": "The State Code is a means to identify a subnational entity by ISO 3166-2 part 2 code. It is an extension of the USPS State Code that represents one of the 50 U.S. States, 6 underlying areas (territories or commonwealths), District of Columbia, and 3 Military Army Post/Fleet Posts."
+                    },
+                    {
+                        "name": "Address Type Code",
+                        "definition": "The Address Type Code is a means to identify the designated usage of an address that is associated with an individual person, person within an organization, or organization itself. Generally, an address is designated as Residential Address, Business Address, and Mailing Address."
+                    }
+                ]
+            },
+            {
+                "name": "Party Email",
+                "attributes": [
+                    {
+                        "name": "Email Address Text",
+                        "definition": "The Email Address Text is a means to identify an individual electronic mailbox for the purpose of sending an electronic message from one electronic mailbox to another."
+                    },
+                    {
+                        "name": "Email Type Code",
+                        "definition": "The Email Type Code identifies the designated usage of a specific Email address. Valid values are Personal, Business, etc."
+                    },
+                    {
+                        "name": "Party Email End Date",
+                        "definition": "The Party Email End Date is the date on which an Email of a certain Type is no longer associated with a Party."
+                    },
+                    {
+                        "name": "Party Email Start Date",
+                        "definition": "The Party Email Start Date is the date on which an Email of a certain Type first became associated with a Party."
+                    },
+                    {
+                        "name": "Party Email UID",
+                        "definition": "The Party Email UID is a surrogate key attribute that identifies an instance of an Email for a Party."
+                    }
+                ]
+            },
+            {
+                "name": "Party Organization",
+                "attributes": [
+                    {
+                        "name": "Organization Name",
+                        "definition": "The Organization Name is a term indicating the name identity of an institution, firm, or other non-person entity."
+                    }
+                ]
+            },
+            {
+                "name": "Party Originating Domain",
+                "attributes": [
+                    {
+                        "name": "Originating Domain Code",
+                        "definition": "The Originating Domain Code is the means to identify the source of the domain from which a Party record came. Valid values include Advisor or Investor."
+                    },
+                    {
+                        "name": "Originating Domain End Date",
+                        "definition": "The Originating Domain End Date is the date on which a Party is no longer known to a given domain."
+                    },
+                    {
+                        "name": "Originating Domain Start Date",
+                        "definition": "The Originating Domain Start Date is the date on which a Party is first known to a given domain."
+                    }
+                ]
+            },
+            {
+                "name": "Party Person",
+                "attributes": [
+                    {
+                        "name": "Birth Date",
+                        "definition": "The Birth Date is the year, calendar month, and day upon which a person was born."
+                    },
+                    {
+                        "name": "Death Date",
+                        "definition": "The Death Date is the year, calendar month, and day upon which a person died."
+                    },
+                    {
+                        "name": "First Name",
+                        "definition": "The First Name is the given name or forename of a person that is used to distinguish one person from another in a group, family, or clan with the same surname."
+                    },
+                    {
+                        "name": "Last Name",
+                        "definition": "The Last Name is the paternal surname given to a person in addition to a given name (forename) and an optional given middle name."
+                    },
+                    {
+                        "name": "Middle Name",
+                        "definition": "The Middle Name is a letter or word that is a second given name to a person and is between the given name (forename) and the last name (surname)."
+                    },
+                    {
+                        "name": "Nickname",
+                        "definition": "The Nickname is an informal name or sobriquet that is used to replace a person’s legal name. Typically a shortened name or name commonly used to express affection, amusement, or character."
+                    },
+                    {
+                        "name": "Prefix Name",
+                        "definition": "The Prefix Name is the honorific that is applied prior to a person’s given name for the purpose of respect of marriage, academic or designation typically used in written communications."
+                    },
+                    {
+                        "name": "Suffix Name",
+                        "definition": "The Suffix Name is a generational title that is applied to the end of a person’s full name for the purpose of generational distinction when more than one person in a family, clan, or group has the same given name(s) and surname. Generally referred to as generational suffix which includes Sr., Jr., I, II, III, IV, etc."
+                    }
+                ]
+            },
+            {
+                "name": "Party Phone",
+                "attributes": [
+                    {
+                        "name": "Extension Number",
+                        "definition": "The Extension Number is a secondary unique sequence of numbers associated with a Business Phone Number for the purpose of reaching a specific individual within an organization."
+                    },
+                    {
+                        "name": "Party Phone End Date",
+                        "definition": "The Party Phone End Date is the date on which a Phone of a certain Type is no longer associated with a Party."
+                    },
+                    {
+                        "name": "Party Phone Start Date",
+                        "definition": "The Party Phone Start Date is the date on which a Phone of a certain Type first became associated with a Party."
+                    },
+                    {
+                        "name": "Party Phone UID",
+                        "definition": "The Party Phone UID is a surrogate key attribute that identifies an instance of a Phone for a Party."
+                    },
+                    {
+                        "name": "Phone Number",
+                        "definition": "The Phone Number is a unique sequence of numbers assigned (following the International Public Telecommunication Numbering Plan structure) to a Residential telephone line, a business telephone line, or mobile device for the purpose of telecommunications."
+                    },
+                    {
+                        "name": "Phone Type Code",
+                        "definition": "The Phone Type Code identifies the designated usage of a phone number that is associated with a telephone line or telecommunications device of the beneficiary. Valid values: Beeper Number, Cellular Phone, Facsimile, Home Phone Number, Telephone, Work Phone Number, Business Phone."
+                    }
+                ]
+            }
         ],
         "stakeholders": [
             "Domain Analysts: Jennifer Andrews",
@@ -34,42 +215,16 @@
         "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59820901476"
     },
     {
-        "title": "Prospect",
+        "title": "Organization",
         "shape": "rect",
-        "name": "prospect",
+        "name": "organization",
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            489,
-            18,
-            673,
-            138
-        ]
-    },
-    {
-        "title": "Sponsor",
-        "shape": "rect",
-        "name": "sponsor",
-        "fillColor": "#eab54d4d",
-        "strokeColor": "black",
-        "coords": [
-            20,
-            188,
-            202,
-            281
-        ]
-    },
-    {
-        "title": "Practice/Firm",
-        "shape": "rect",
-        "name": "practice",
-        "fillColor": "#eab54d4d",
-        "strokeColor": "black",
-        "coords": [
-            254,
-            189,
-            437,
-            281
+            19,
+            203,
+            233,
+            343
         ]
     },
     {
@@ -79,10 +234,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            489,
-            188,
-            673,
-            307
+            319,
+            204,
+            534,
+            343
         ],
         "description": "The Advisor Subject Area encompasses the information specific to the following roles: Advisor, Advisor Prospect, Licensed Assistant, Non-licensed Assistant, Branch, Institution, RIA Firm, Broker Dealer, and other associated persons and entities who provide investment support.",
         "attributes": [
@@ -96,29 +251,16 @@
         "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59713716465"
     },
     {
-        "title": "Advisor Role",
+        "title": "Investor",
         "shape": "rect",
-        "name": "advisorrole",
+        "name": "investor",
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            723,
-            188,
-            908,
-            323
-        ]
-    },
-    {
-        "title": "Client/Investor",
-        "shape": "rect",
-        "name": "clientinvestor",
-        "fillColor": "#eab54d4d",
-        "strokeColor": "black",
-        "coords": [
-            960,
-            188,
-            1144,
-            309
+            620,
+            204,
+            834,
+            342
         ],
         "description": "The Investor Subject Area encompasses Individuals or Entities with an investment relationship with the firm, including Investor Prospects as well as those Investors who have any role on an Account.",
         "attributes": [
@@ -131,16 +273,16 @@
         "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59882864897"
     },
     {
-        "title": "Contract Details",
+        "title": "Service Agreement",
         "shape": "rect",
-        "name": "contractdetails",
+        "name": "serviceagreement",
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            254,
-            378,
-            438,
-            513
+            319,
+            383,
+            533,
+            521
         ],
         "description": "",
         "attributes": [],
@@ -149,16 +291,16 @@
         "confluence": ""
     },
     {
-        "title": "Contract",
+        "title": "Service Agreement Details",
         "shape": "rect",
-        "name": "contract",
+        "name": "serviceagmtdetails",
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            489,
-            378,
-            673,
-            481
+            57,
+            517,
+            272,
+            656
         ],
         "description": "",
         "attributes": [],
@@ -173,10 +315,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            959,
-            376,
-            1144,
-            496
+            619,
+            383,
+            834,
+            522
         ],
         "description": "The Account Subject Area encompasses the details specific to all types of Investment Accounts, including custodied brokerage and advisory accounts, direct business accounts, TAMP accounts, and bank trust accounts.",
         "attributes": [
@@ -197,50 +339,23 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            1196,
-            377,
-            1379,
-            481
+            867,
+            573,
+            1081,
+            680
         ]
     },
     {
-        "title": "Legal Entity",
+        "title": "Instrument",
         "shape": "rect",
-        "name": "legalentity",
+        "name": "instrument",
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            254,
-            580,
-            438,
-            687
-        ]
-    },
-    {
-        "title": "Service",
-        "shape": "rect",
-        "name": "service",
-        "fillColor": "#eab54d4d",
-        "strokeColor": "black",
-        "coords": [
-            724,
-            579,
-            908,
-            688
-        ],
-        "waltz": "http://10.124.192.192:8443/data-types/7"
-    },
-    {
-        "title": "Instrument/Product",
-        "shape": "rect",
-        "name": "instrumentproduct",
-        "fillColor": "#eab54d4d",
-        "strokeColor": "black",
-        "coords": [
-            959,
-            579,
-            1144,
-            699
+            319,
+            611,
+            533,
+            723
         ],
         "description": "The Product Subject Area encompasses the information specific to investable financial securities in all asset classes.",
         "attributes": [
@@ -259,10 +374,10 @@
         "fillColor": "#eab54d4d",
         "strokeColor": "black",
         "coords": [
-            1196,
-            581,
-            1378,
-            684
+            619,
+            563,
+            834,
+            702
         ],
         "description": "",
         "attributes": [
@@ -272,5 +387,19 @@
             "Core Transaction Data"
         ],
         "waltz": "http://10.124.192.192:8443/data-types/5"
+    },
+    {
+        "title": "Account Details",
+        "shape": "rect",
+        "name": "accountdetails",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "black",
+        "coords": [
+            867,
+            393,
+            1081,
+            505
+        ],
+        "description": ""
     }
 ]

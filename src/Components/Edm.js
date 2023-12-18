@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Mapper from "./Mapper";
-import Dropdown from "./Dropdown";
+import React, { useState, useEffect } from 'react'
+import Mapper from "./Mapper"
+import Dropdown from "./Dropdown"
 
 function Edm() {
-    const [useCase, setUseCase] = useState(null);
-    const [currentStep, setCurrentStep] = useState(null);
-    const [stepsByUseCase, setStepsByUseCase] = useState(null);
+    const [useCase, setUseCase] = useState(null)
+    const [currentStep, setCurrentStep] = useState(null)
+    const [stepsByUseCase, setStepsByUseCase] = useState(null)
 
-    // Callback function to update useCase
     const handleUseCaseChange = (selectedUseCase) => {
-        setUseCase(selectedUseCase);
-        setCurrentStep(null); // Reset currentStep when useCase changes
+        setUseCase(selectedUseCase)
+        setCurrentStep(null)
     };
 
-    // Callback function to update currentStep
     const handleStepClick = (selectedUseCase, step) => {
-        setCurrentStep(step);
+        setCurrentStep(step)
     };
 
     useEffect(() => {
@@ -63,8 +61,8 @@ function Edm() {
                 'Enter Available Acceptance & Discretion Info',
                 'Review Order'
             ]
-        });
-    }, [useCase]);
+        })
+    }, [useCase])
 
     return (
         <div>
@@ -85,7 +83,7 @@ function Edm() {
             <Dropdown onUseCaseChange={handleUseCaseChange} onStepClick={handleStepClick} stepsByUseCase={stepsByUseCase}></Dropdown>
             <Mapper selectedUseCase={useCase} selectedStep={currentStep} stepsByUseCase={stepsByUseCase}></Mapper>
         </div >
-    );
+    )
 }
 
 export default Edm;
