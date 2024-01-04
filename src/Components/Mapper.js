@@ -33,7 +33,13 @@ const Mapper = ({ selectedUseCase, selectedStep, stepsByUseCase }) => {
             const useCaseIndex = Object.keys(stepsByUseCase).indexOf(selectedUseCase) + 1
             const stepIndex = stepsByUseCase[selectedUseCase].indexOf(selectedStep) + 1
             const fileName = `${useCaseIndex}_${stepIndex}.png`
-            return `${process.env.PUBLIC_URL}/${fileName}`
+
+            if (useCaseIndex === 2) {
+                return `${process.env.PUBLIC_URL}/2.png`
+            }
+            else {
+                return `${process.env.PUBLIC_URL}/${fileName}`
+            }
         } else {
             return `${process.env.PUBLIC_URL}/edm.png`
         }

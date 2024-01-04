@@ -240,12 +240,225 @@
             343
         ],
         "description": "The Advisor Subject Area encompasses the information specific to the following roles: Advisor, Advisor Prospect, Licensed Assistant, Non-licensed Assistant, Branch, Institution, RIA Firm, Broker Dealer, and other associated persons and entities who provide investment support.",
-        "attributes": [
-            "Party ID",
-            "CRD and/or NPN",
-            "License and Registration Details",
-            "Affiliation Details",
-            "Core Party Data"
+        "concepts": [
+            {
+                "name": "Advisor Party",
+                "attributes": [
+                    {
+                        "name": "Advisor Party End Date",
+                        "definition": "The Advisor Party End Date is the date on which an Advisor Party is no longer active with LPL."
+                    },
+                    {
+                        "name": "Advisor Party Start Date",
+                        "definition": "The Advisor Party Start Date is the date on which an Advisor Party first became known to LPL."
+                    },
+                    {
+                        "name": "Advisor Party UID",
+                        "definition": "The Advisor Party UID is a surrogate key attribute based on the business candidate key of either the Organization or the Associate. This value can only be assigned after aggregation (e.g., per a SQL UNION) of all the subclasses."
+                    },
+                    {
+                        "name": "Introducing Broker Dealer Code",
+                        "definition": "The Introducing Broker Dealer Code is the acronym which delineates between LPL Financial (LPL), Equitable (EQH, previously AXA), and LPL Enterprise (LPE). Also known as Subfirm in the BETA system."
+                    },
+                    {
+                        "name": "Party Type Code",
+                        "definition": "The Party Type Code is a means to identify a specific party as either a person or an organization."
+                    },
+                    {
+                        "name": "Taxpayer ID Number",
+                        "definition": "The Taxpayer Identification Number (TIN) is an identification number used by the Internal Revenue Service (IRS) in the administration of tax laws."
+                    },
+                    {
+                        "name": "Taxpayer ID Type Code",
+                        "definition": "The Taxpayer ID Type Code is a means to identify the specific type of taxpayer identification number associated with an individual person and/or organization."
+                    }
+                ]
+            },
+            {
+                "name": "Advisor Party Address",
+                "attributes": [
+                    {
+                        "name": "Advisor Party Address End Date",
+                        "definition": "The Advisor Party Address End Date is the date on which an Address of a certain type is no longer active for an Advisor Party."
+                    },
+                    {
+                        "name": "Advisor Party Address Start Date",
+                        "definition": "The Advisor Party Address Start Date is the date on which an Address of a certain type is first known to an Advisor Party."
+                    },
+                    {
+                        "name": "Advisor Party Address Type Code",
+                        "definition": "The Address Type Code is a means to identify the designated usage of an address that is associated to an individual person, person within an organization, or organization itself."
+                    },
+                    {
+                        "name": "Advisor Party Address UID",
+                        "definition": "The Advisor Party Address UID is a surrogate key attribute which identifies an instance of an Address for a Party who is from the Advisor domain."
+                    },
+                    {
+                        "name": "City Name",
+                        "definition": "The City Name is the designator for a place name, a second level geopolitical area accepted by the specific postal authority."
+                    },
+                    {
+                        "name": "Country Code",
+                        "definition": "The Country Code is a means to uniquely identify a country, a region that is identified as a distinct sovereign entity and geopolitical area."
+                    },
+                    {
+                        "name": "Delivery Line 1 Text",
+                        "definition": "The Delivery Line 1 Text is a group of attributes that consists of Primary Address Number, Pre-directional Code (optional), Street Name, Street Suffix Code, Post-directional Code (optional), Secondary Address Designator/Identifier Code (optional), Secondary Address Number (optional). Alternatively, the recipient may use a PO Box instead of these parts in certain contexts."
+                    },
+                    {
+                        "name": "Delivery Line 2 Text",
+                        "definition": "The Address Line 2 Text is a group of attributes, as an overflow from Delivery Line 1 Text, that consists of Secondary Address Designator(s)/Identifier(s), Secondary Address Number(s). It's rarely used."
+                    },
+                    {
+                        "name": "Postal Code",
+                        "definition": "The Postal Code is a series of letters, or digits, or both that is associated with a geographical area or large institution that receives volumes of mail."
+                    },
+                    {
+                        "name": "State Code",
+                        "definition": "The State Code is a means to identify a subnational entity by ISO 3166-2 part 2 code."
+                    }
+                ]
+            },
+            {
+                "name": "Advisor Party Email",
+                "attributes": [
+                    {
+                        "name": "Advisor Party Email End Date",
+                        "definition": "The Advisor Party Email End Date is the date on which an Email of a certain Type is no longer associated to an Advisor."
+                    },
+                    {
+                        "name": "Advisor Party Email Start Date",
+                        "definition": "The Advisor Party Email Start Date is the date on which an Email of a certain Type first became associated to an Advisor."
+                    },
+                    {
+                        "name": "Advisor Party Email UID",
+                        "definition": "The Advisor Email Address UID is a surrogate key attribute which identifies an instance of an Email for a Party who is from the Advisor domain."
+                    },
+                    {
+                        "name": "Email Address Text",
+                        "definition": "The Email Address Text is a means to identify an individual electronic mailbox for the purpose of sending an electronic message from one electronic mailbox to another."
+                    },
+                    {
+                        "name": "Email Type Code",
+                        "definition": "The Email Type Code identifies the designated usage of a specific Email address. Valid values are Personal, Business, etc."
+                    }
+                ]
+            },
+            {
+                "name": "Advisor Party Organization",
+                "attributes": [
+                    {
+                        "name": "Organization CRD Number",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Organization Name",
+                        "definition": "The Organization Name is a term indicating the name identity of an institution, firm, or other non-person entity."
+                    },
+                    {
+                        "name": "Organization Type Code",
+                        "definition": "The Organization Type Code is very short string that shows the type of organization."
+                    },
+                    {
+                        "name": "Organization UID",
+                        "definition": "The Organization UID is a role-named foreign key attribute from Advisor Party UID,"
+                    }
+                ]
+            },
+            {
+                "name": "Advisor Party Person",
+                "attributes": [
+                    {
+                        "name": "Advisor Person Type Code",
+                        "definition": "The Associate Type Code is a short abbreviation that indicates the current capacity that the person generally has with regards to FINRA and/or NIPR with consideration to the company's own role definitions. This entity-type uses only the first character to differentiate between these subtypes."
+                    },
+                    {
+                        "name": "Advisor Person UID",
+                        "definition": "The Associate UID is a role-named foreign key attribute from Advisor Party UID, which is a surrogate key attribute based on the Generated SSN-Email Text (candidate key) of the Associate."
+                    },
+                    {
+                        "name": "Birth Date",
+                        "definition": "The Birth Date is the year, calendar month, and day upon which a person was born."
+                    },
+                    {
+                        "name": "Death Date",
+                        "definition": "The Death Date is the year, calendar month, and day upon which a person died."
+                    },
+                    {
+                        "name": "First Name",
+                        "definition": "The First Name is the given name or forename of a person that is used to distinguish one person from another in a group, family or clan with the same surname."
+                    },
+                    {
+                        "name": "Last Name",
+                        "definition": "The Last Name is the paternal surname given to a person in addition to a given name (forename) and an optional given middle name."
+                    },
+                    {
+                        "name": "Middle Name",
+                        "definition": "The Middle Name is the a letter or word that is a second given name to a person and is between the given name (forename) and the last name (surname)."
+                    },
+                    {
+                        "name": "National Producer Number",
+                        "definition": "The National Producer Number (NPN) is a unique identifier assigned through the National Association of Insurance Commissioner's (NAIC's) licensing application process. The NPN is used to track individuals and business entities on a national basis."
+                    },
+                    {
+                        "name": "Nickname",
+                        "definition": "The Nickname is an informal name or sobriquet that is used to replace a person’s legal name. Typically a shortened name or name commonly used to express affection, amusement, or character."
+                    },
+                    {
+                        "name": "Person CRD Number",
+                        "definition": "The CRD Number is the Central Repository Database Number assigned by FINRA for the Licensed Associate."
+                    },
+                    {
+                        "name": "Position Title",
+                        "definition": "The Position Title is a short phrase describing an occupation as it would appear on a business card."
+                    },
+                    {
+                        "name": "Prefix Name",
+                        "definition": "The Prefix Name is the honorific that is applied prior to a person’s given name for the purpose of respect of marriage, academic or designation typically used in written communications. The following are the acceptable values for Person’s Name Title/Prefix: 1. Mr 2. Miss 3. Mrs 4. Ms 5. Mx 6. Dr 7. Hon"
+                    },
+                    {
+                        "name": "Previous BD Master Rep ID",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Primary Branch UID",
+                        "definition": "The Primary Branch UID is the unique identifier for the Associate's primary branch location. In the event an advisor is associated with more than one branch location, the non-licensed associates supporting the Licensed Associate inherit his/her primary branch location."
+                    },
+                    {
+                        "name": "Sex Code",
+                        "definition": "The Sex Code is one of four codes specified in ISO/IEC 5218, which are: 0 = Not known; 1 = Male; 2 = Female; 9 = Not applicable. The standard specifies that its use may be referred to by the designator \"SEX\"."
+                    },
+                    {
+                        "name": "Suffix Name",
+                        "definition": "The Suffix Name is the a generational title that is applied to the end of a persons full name for the purpose of generational distinction when more than one person in a family, clan or group has the same given name(s) and surname. Generally referred to as generational suffix which includes Sr., Jr., I, II, III, IV, etc"
+                    }
+                ]
+            },
+            {
+                "name": "Advisor Party Phone",
+                "attributes": [
+                    {
+                        "name": "Advisor Party Phone End Date",
+                        "definition": "The Advisor Party Phone End Date is the date on which a Phone of a certain Type is no longer associated to an Advisor."
+                    },
+                    {
+                        "name": "Advisor Party Phone Start Date",
+                        "definition": "The Advisor Party Phone Start Date is the date on which a Phone of a certain Type first became associated to an Advisor."
+                    },
+                    {
+                        "name": "Advisor Party Phone UID",
+                        "definition": "The Advisor Party Phone UID is a surrogate key attribute which identifies an instance of a Phone for a Party who is from the Advisor domain."
+                    },
+                    {
+                        "name": "Phone Number",
+                        "definition": "The Phone Number is a unique sequence of numbers assigned to a Residential telephone line, a business telephone line, or mobile device for the purpose of telecommunications."
+                    },
+                    {
+                        "name": "Phone Type Code",
+                        "definition": "The Phone Type Code identifies the designated usage of  a phone number that is associated to a telephone line or telecommunications device of the beneficiary. Valid values: Beeper Number, Cellular Phone, Facsimile, Home Phone Number, Telephone, Work Phone Number, Business Phone"
+                    }
+                ]
+            }
         ],
         "waltz": "http://10.124.192.192:8443/data-types/1",
         "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59713716465"
@@ -263,11 +476,651 @@
             342
         ],
         "description": "The Investor Subject Area encompasses Individuals or Entities with an investment relationship with the firm, including Investor Prospects as well as those Investors who have any role on an Account.",
-        "attributes": [
-            "Contract ID",
-            "Party IDs (Advisor/Firm Role",
-            "Party Roles and Status",
-            "Core Party Data"
+        "concepts": [
+            {
+                "name": "Investor Account Relationship",
+                "attributes": [
+                    {
+                        "name": "Account Control Indicator",
+                        "definition": "An indicator whether this investor has control over the account."
+                    },
+                    {
+                        "name": "Account Control Owner Indicator",
+                        "definition": "The indicator whether the beneficial owner fits FinCEN definition for a control owner. ControlOwner is an individual with significant responsibility to control, manage or direct the legal entity party including an executive officer or senior manager."
+                    },
+                    {
+                        "name": "Account Holder Role Label",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Beneficial Owners Indicator",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Legacy Account Holder Role Code",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Legal Owner Indicator",
+                        "definition": "An indicator whether the individual is the legal owner of the account."
+                    }
+                ]
+            },
+            {
+                "name": "Investor Party",
+                "attributes": [
+                    {
+                        "name": "City Name",
+                        "definition": "The City Name is the designator for a place name, a second level geopolitical area accepted by the specific postal authority, such as the United States Postal Service (USPS), where the first level geopolitical area is State Code, and may be associated to a Postal Code. The USPS designates one preferred place name for each ZIP Code."
+                    },
+                    {
+                        "name": "Client Since Date",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Country Code",
+                        "definition": "The Country Code is a means to uniquely identify a country, a region that is identified as a distinct sovereign entity and geopolitical area. An ISO 3166 Alpha-2 code (“US”) will be utilized for the representation of a country code."
+                    },
+                    {
+                        "name": "Delivery Line 1 Text",
+                        "definition": "The Delivery Line 1 Text is a group of attributes that consists of: -- Primary Address Number -- Pre-directional Code (optional) -- Street Name -- Street Suffix Code -- Post-directional Code (optional) -- Secondary Address Designator/Identifier Code (optional) -- Secondary Address Number (optional) Alternatively, the recipient may use a PO Box instead of these parts in certain contexts."
+                    },
+                    {
+                        "name": "Delivery Line 2 Text",
+                        "definition": "The Address Line 2 Text is a group of attributes, as an overflow from Delivery Line 1 Text, so it's rarely used, that consists of: Secondary Address Designator(s)/Identifier(s) Secondary Address Number(s)"
+                    },
+                    {
+                        "name": "Email Address Text",
+                        "definition": "The Email Address Text is a means to identify an individual electronic mailbox for the purpose of sending an electronic message from one electronic mailbox to another."
+                    },
+                    {
+                        "name": "Email Type Code",
+                        "definition": "The Email Type Code identifies the designated usage of a specific Email address. Valid values are Personal, Business, etc."
+                    },
+                    {
+                        "name": "Extension Number",
+                        "definition": "The Extension Number is a secondary unique sequence of numbers associated with a Business Phone Number for the purpose of reaching a specific individual within an organization."
+                    },
+                    {
+                        "name": "Introducing Broker Dealer Code",
+                        "definition": "The Introducing Broker Dealer Code is the acronym which delineates between LPL Financial (LPL), Equitable (EQH, previously AXA), and LPL Enterprise (LPE). Also known as Subfirm in the BETA system."
+                    },
+                    {
+                        "name": "Investor Party Address UID",
+                        "definition": "The Investor Party Address UID is a surrogate key attribute which identifies an instance of an Address for a Party who is from the Investor domain."
+                    },
+                    {
+                        "name": "Investor Party Email UID",
+                        "definition": "The Investor Party Email UID is a surrogate key attribute which identifies an instance of an Email for a Party who is from the Investor domain."
+                    },
+                    {
+                        "name": "Investor Party Phone UID",
+                        "definition": "The Investor Party Phone UID is a surrogate key attribute which identifies an instance of a Phone for a Party who is from the Investor domain."
+                    },
+                    {
+                        "name": "Investor Party UID",
+                        "definition": "The Investor Party ID is the unique identifier connecting a Party to relevant Investor subject area information."
+                    },
+                    {
+                        "name": "Organization Name",
+                        "definition": "The Organization Name is a term indicating the name identity of an institution, firm, or other non-person entity."
+                    },
+                    {
+                        "name": "Party Type Code",
+                        "definition": "The Party Type Code is a means to identify a specific party as either a person or an organization."
+                    },
+                    {
+                        "name": "Party UID",
+                        "definition": "The Party UID is an identifier that is assigned to a person or an organization to uniquely identify them."
+                    },
+                    {
+                        "name": "Phone Number",
+                        "definition": "The Phone Number is a unique sequence of numbers assigned (following the International Public Telecommunication Numbering Plan structure) to a Residential telephone line, a business telephone line, or mobile device for the purpose of telecommunications."
+                    },
+                    {
+                        "name": "Phone Type Code",
+                        "definition": "The Phone Type Code identifies the designated usage of a phone number that is associated with a telephone line or telecommunications device of the beneficiary. Valid values: Beeper Number, Cellular Phone, Facsimile, Home Phone Number, Telephone, Work Phone Number, Business Phone"
+                    },
+                    {
+                        "name": "Postal Code",
+                        "definition": "The Postal Code is a series of letters, or digits, or both (sometimes including spaces and/or punctuation) that is associated with a geographical area or large institution that receives volumes of mail and is utilized as part of an address to aid in the sorting of mail."
+                    },
+                    {
+                        "name": "State Code",
+                        "definition": "The State Code is a means to identify a subnational entity by ISO 3166-2 part 2 code. It is an extension of the USPS State Code that represents one of the 50 U.S. States, 6 underlying areas (territories or commonwealths), District of Columbia, and 3 Military Army Post/Fleet Posts."
+                    },
+                    {
+                        "name": "Taxpayer ID Number",
+                        "definition": "The Taxpayer Identification Number (TIN) is an identification number used by the Internal Revenue Service (IRS) in the administration of tax laws. A Social Security number (SSN) is issued by the Social Security Administration, whereas all other TINs are issued by the IRS."
+                    },
+                    {
+                        "name": "Taxpayer ID Type Code",
+                        "definition": "The Taxpayer ID Type Code is a means to identify the specific type of taxpayer identification number associated with an individual person and/or organization."
+                    },
+                    {
+                        "name": "Investor Party Address Type Code",
+                        "definition": "The Address Type Code is a means to identify the designated usage of an address that is associated with an individual person, person within an organization, or organization itself. Generally, an address is designated as Residential Address, Business Address, and Mailing Address."
+                    },
+                    {
+                        "name": "Investor Party Phone End Date",
+                        "definition": "The Investor Party Phone End Date is the date on which a Phone of a certain Type is no longer associated with an Investor."
+                    },
+                    {
+                        "name": "Investor Party Phone Start Date",
+                        "definition": "The Investor Party Phone Start Date is the date on which a Phone of a certain Type first became associated with an Investor."
+                    },
+                    {
+                        "name": "Investor Party Email End Date",
+                        "definition": "The Investor Party Email End Date is the date on which an Email of a certain Type is no longer associated with an Investor."
+                    },
+                    {
+                        "name": "Investor Party Email Start Date",
+                        "definition": "The Investor Party Email Start Date is the date on which an Email of a certain Type first became associated with an Investor."
+                    }
+                ]
+            },
+            {
+                "name": "Investor Party Address",
+                "attributes": [
+                    {
+                        "name": "Investor Party Address Start Date",
+                        "definition": "The Investor Party Address Start Date is the date on which an Address of a certain type is first known to an Investor Party."
+                    },
+                    {
+                        "name": "Investor Party Address End Date",
+                        "definition": "The Investor Party Address End Date is the date on which an Address of a certain type is no longer active for an Investor Party."
+                    }
+                ]
+            },
+            {
+                "name": "Investor Party Organization",
+                "attributes": [
+                    {
+                        "name": "Doing Business As",
+                        "definition": "The Doing Business As is the term indicating the name identity of an institution, firm, or other non-person entity."
+                    },
+                    {
+                        "name": "DUNS",
+                        "definition": "DUNS is a unique nine-digit number that identifies business entities on a location-specific basis. Assigned and maintained by Dun & Bradstreet."
+                    },
+                    {
+                        "name": "EIN Exempt Indicator",
+                        "definition": "EIN Exempt Indicator is an indicator that an Organizational Investor is exempt from providing a TIN of type EIN."
+                    },
+                    {
+                        "name": "Legal Entity Identifier Code",
+                        "definition": "A 20-character, alpha-numeric code based on the ISO 17442 standard developed by the International Organization for Standardization (ISO). It connects to key reference information that enables clear and unique identification of legal entities participating in financial transactions."
+                    },
+                    {
+                        "name": "Legal Establishment Country Code",
+                        "definition": "The Country Code is a means to uniquely identify a country, a region that is identified as a distinct sovereign entity and geopolitical area. An ISO 3166 Alpha-2 code ('US') will be utilized for the representation of a country code."
+                    },
+                    {
+                        "name": "Non Profit Indicator",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Organization Industry Label",
+                        "definition": "Industry Label is the LPL classification of an organization's primary line of business."
+                    },
+                    {
+                        "name": "Organization Type Label",
+                        "definition": "Organization Type Label is the label defining the type of organization the Investor Profile is describing. (Corp C, Corp S, LLC, Sole Proprietorship, Trust, Estate, etc.)"
+                    },
+                    {
+                        "name": "Publicly Traded Indicator",
+                        "definition": "Publicly Traded Indicator is the indicator whether the entity is publicly traded. Legal Entity DOES NOT need to list beneficial owners if legal entity opening the account is a U.S. publicly traded company or its parent has at least 51% ownership and is publicly traded."
+                    }
+                ]
+            },
+            {
+                "name": "Investor Party Person",
+                "attributes": [
+                    {
+                        "name": "Account Reporting Exclusion Indicator",
+                        "definition": "The Account Reporting Exclusion Indicator is the indication of whether the account information is excluded from reporting to FINRA CAIS."
+                    },
+                    {
+                        "name": "Additional Investments Indicator",
+                        "definition": "The Additional Investments Indicator is the indication if the Investor has other assets to be considered in their application for an account, represented as a percentage of their whole net worth."
+                    },
+                    {
+                        "name": "Affiliated Person Firm Name",
+                        "definition": "The Affiliated Person Firm Name is the name of the firm the Associated person is employed."
+                    },
+                    {
+                        "name": "Affiliated Person Name",
+                        "definition": "The Affiliated Person Name is the name of person the Investor is associated with and has an affiliation to the financial industry per FINRA regulations."
+                    },
+                    {
+                        "name": "Affiliation Type Label",
+                        "definition": "The Affiliation Type Label is the industry Affiliation: Select a role from the dropdown if a FINRA employee or person associated with a broker/dealer or municipal securities dealer has a financial interest in, controls trading in, or has discretionary authority over this account."
+                    },
+                    {
+                        "name": "Aliases",
+                        "definition": "Aliases is The list of names the Investor is also known by."
+                    },
+                    {
+                        "name": "Annual Income Label",
+                        "definition": "The Annual Income Label is the estimated value of the investor's total annual income from all sources. Typically captured as a range of values."
+                    },
+                    {
+                        "name": "Asset Allocation Alternative Investments Percentage",
+                        "definition": "The Alternative Investments Percentage is the the proportion of the Investor's assets that are available as Alternative Investments. Represented as a percentage."
+                    },
+                    {
+                        "name": "Asset Allocation Annuities Percentage",
+                        "definition": "The Annuities Percentage is the the proportion of the Investor's assets that are available as Annuities. Represented as a percentage."
+                    },
+                    {
+                        "name": "Asset Allocation Bonds Percentage",
+                        "definition": "The Bonds Percentage is the the proportion of the Investor's assets that are available as Bonds. Represented as a percentage."
+                    },
+                    {
+                        "name": "Asset Allocation Checking Savings Percentage",
+                        "definition": "The Checking Savings Percentage is the the proportion of the Investor's assets that are available as Checking or Savings. Represented as a percentage."
+                    },
+                    {
+                        "name": "Asset Allocation Equities Stocks Percentage",
+                        "definition": "The Equities Stocks Percentage is the the proportion of the Investor's assets that are available as Equities. Represented as a percentage."
+                    },
+                    {
+                        "name": "Asset Allocation Insurance Percentage",
+                        "definition": "The Insurance Percentage is the the proportion of the Investor's assets that are available as Insurance products. Represented as a percentage."
+                    },
+                    {
+                        "name": "Asset Allocation Mutual Funds Percentage",
+                        "definition": "The Mutual Funds Percentage is the the proportion of the Investor's assets that are available as Mutual Funds. Represented as a percentage."
+                    },
+                    {
+                        "name": "Asset Allocation Other Investment Explanation",
+                        "definition": "The Other Investment Explanation is the when an Investor selects 'Other' as a category for Investment assets, they are required to provide a brief text description of the asset(s)."
+                    },
+                    {
+                        "name": "Asset Allocation Other Investment Percentage",
+                        "definition": "The Other Investment Percentage is the the proportion of the Investor's assets that are available as Other Investments not enumerated in the previous categories. Represented as a percentage."
+                    },
+                    {
+                        "name": "Asset Allocation Ownership Percentage",
+                        "definition": "The percentage of ownership the Investor has of the entity."
+                    },
+                    {
+                        "name": "Asset Allocation Real Estate Percentage",
+                        "definition": "The Real Estate Percentage is the the proportion of the Investor's assets that are available as Real Estate. Represented as a percentage."
+                    },
+                    {
+                        "name": "Birth Date",
+                        "definition": "The Birth Date is the year, calendar month, and day upon which a person was born."
+                    },
+                    {
+                        "name": "Books and Records Letter Sent Date",
+                        "definition": "The Books and Records Letter Sent Date is the the date the books and records letter was last sent."
+                    },
+                    {
+                        "name": "CIP Exempt Indicator",
+                        "definition": "CIP Exempt is indicator that Customer is sent through LexisNexis to validate a person's identity."
+                    },
+                    {
+                        "name": "CIP Verified Indicator",
+                        "definition": "CIP Verified is indicator that the Advisor has personally met the Investor and verified their person."
+                    },
+                    {
+                        "name": "Citizenship Country Code",
+                        "definition": "The Country Code is a means to uniquely identify a country, a region that is identified as a distinct sovereign entity and geopolitical area. An ISO 3166 Alpha-2 code ('US') will be utilized for the representation of a country code."
+                    },
+                    {
+                        "name": "Common Stock Symbol",
+                        "definition": "The Common Stock Symbol is the if the Investor qualifies as an 'insider', list the name of the company they work or hold a significant position in."
+                    },
+                    {
+                        "name": "Customer Corporate Officer Indicator",
+                        "definition": "The Customer Corporate Officer Indicator is the section 16 of the Exchange Act applies to an SEC reporting company's directors and officers, as well as shareholders who own more than 10% of a class of the company's equity securities registered under the Exchange Act."
+                    },
+                    {
+                        "name": "Death Date",
+                        "definition": "The Death Date is the year, calendar month, and day upon which a person died."
+                    },
+                    {
+                        "name": "Dual Citizen Indicator",
+                        "definition": "The Dual Citizen Indicator is the indicates whether an individual holds dual citizenship."
+                    },
+                    {
+                        "name": "Education Level Label",
+                        "definition": "The Education Level Label is the firm-defined code that identifies the education level of the Person Investor."
+                    },
+                    {
+                        "name": "Email Opt Out Indicator",
+                        "definition": "Email Opt Out is an indicator if the investor elected to opt out of providing an e-mail address."
+                    },
+                    {
+                        "name": "Employer Address UID",
+                        "definition": "An integer field representing the UID of the employer's address."
+                    },
+                    {
+                        "name": "Employer Industry Label",
+                        "definition": "The Industry Label is the industry grouping of the employer."
+                    },
+                    {
+                        "name": "Employer Name",
+                        "definition": "The Employer Name is the name of the client's employer."
+                    },
+                    {
+                        "name": "Employment Status",
+                        "definition": "The Employment Status is the investor's employment status at the time of application for an account or service."
+                    },
+                    {
+                        "name": "First Name",
+                        "definition": "The First Name is the given name or forename of a person."
+                    },
+                    {
+                        "name": "Government ID Expiration Date",
+                        "definition": "The Expiration Date is the date on which the government ID expires."
+                    },
+                    {
+                        "name": "Government ID Issue Country Code",
+                        "definition": "The Country Code is a means to uniquely identify a country, a region that is identified as a distinct sovereign entity and geopolitical area. An ISO 3166 Alpha-2 code ('US') will be utilized for the representation of a country code."
+                    },
+                    {
+                        "name": "Government ID Issue Date",
+                        "definition": "The Issue Date is the date on which the government ID was issued to the individual or non-individual for the demographic record."
+                    },
+                    {
+                        "name": "Government ID State Code",
+                        "definition": "The State Code is a means to identify a subnational entity by ISO 3166-2 part 2 code. It is an extension of the USPS State Code that represents one of the 50 U.S. States, 6 underlying areas (territories or commonwealths), District of Columbia, and 3 Military Army Post/Fleet Posts."
+                    },
+                    {
+                        "name": "Government ID Verification Date",
+                        "definition": "The Verification Date is the date the identification was last verified."
+                    },
+                    {
+                        "name": "Government ID Verified By",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Industry Affiliation Address UID",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Industry Affiliation Relationship",
+                        "definition": "The Relationship is the description of the affiliation the Investor and associated person."
+                    },
+                    {
+                        "name": "Inside Investor Corporation Name",
+                        "definition": "The Corporation Name is the if the Investor qualifies as an 'insider', list the name of the company they work or hold a significant position in."
+                    },
+                    {
+                        "name": "Investment Experience Annuities Years",
+                        "definition": "The Annuities Years is the number of years the investor party has investing with Annuities. (With LPL or without LPL). Value must be NULL or 1-100. (Zero is not allowed.)"
+                    },
+                    {
+                        "name": "Investment Experience Bonds Years",
+                        "definition": "The Bonds Years is the number of years the investor party has investing with Bonds. (With LPL or without LPL)."
+                    },
+                    {
+                        "name": "Investment Experience Equities Years",
+                        "definition": "The Equities Years is the number of years the investor party has investing with Equities. (With LPL or without LPL)."
+                    },
+                    {
+                        "name": "Investment Experience Margin Years",
+                        "definition": "The Margin Years is the number of years the investor party has investing with Margin. (With LPL or without LPL)."
+                    },
+                    {
+                        "name": "Investment Experience Mutual Funds Years",
+                        "definition": "The Mutual Funds Years is the number of years the investor party has investing with Mutual Funds. (With LPL or without LPL)."
+                    },
+                    {
+                        "name": "Investment Experience Options Years",
+                        "definition": "The Options Years is the number of years the investor party has investing with Options. (With LPL or without LPL)."
+                    },
+                    {
+                        "name": "Investment Experience Other Investment Explanation",
+                        "definition": "The Other Investment Explanation is the text explaining Other investment."
+                    },
+                    {
+                        "name": "Investment Experience Other Investment Years",
+                        "definition": "The Other Investment Years is the number of years the investor party has investing with Other. (With LPL or without LPL)."
+                    },
+                    {
+                        "name": "Investment Experience Partnership Years",
+                        "definition": "The Partnership Years is the number of years the investor party has investing with Partnerships. (With LPL or without LPL)."
+                    },
+                    {
+                        "name": "Last Name",
+                        "definition": "The Last Name is the paternal surname given to a person in addition to a given name (forename) and an optional given middle name."
+                    },
+                    {
+                        "name": "Liquid Net Worth Label",
+                        "definition": "The Liquid Net Worth Label is the estimated value of the client's liquid net worth. Liquid Net Worth is a person's Net Worth less real estate and retirement accounts. Typically captured as a range of values. Authoritative source is a code representing ranges of dollars."
+                    },
+                    {
+                        "name": "Marital Status Code",
+                        "definition": "The Marital Status Code is the firm-defined code that identifies the marital status of Person Investor."
+                    },
+                    {
+                        "name": "Middle Name",
+                        "definition": "The Middle Name is the a letter or word that is a second given name to a person and is between the given name (forename) and the last name (surname)."
+                    },
+                    {
+                        "name": "Net Worth Label",
+                        "definition": "The Net Worth Label is the estimated value of the client's total net worth. Typically captured as a range of values. Authoritative source is a code representing ranges of dollars."
+                    },
+                    {
+                        "name": "Number of Dependents",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "OFAC Verification Indicator",
+                        "definition": "The OFAC Verification Indicator is the field indicates whether the individual has passed OFAC (Office of Foreign Asset Control) verification."
+                    },
+                    {
+                        "name": "Preferred Name",
+                        "definition": "The Preferred Name is the name client prefers to be called."
+                    },
+                    {
+                        "name": "Prefix Name",
+                        "definition": "The Prefix Name is the honorific that is applied prior to a person’s given name for the purpose of respect of marriage, academic or designation typically used in written communications. The following are the acceptable values for Person’s Name Title/Prefix: 1. Mr 2. Miss 3. Mrs 4. Ms 5. Mx 6. Dr 7. Hon"
+                    },
+                    {
+                        "name": "Primary Occupation Description",
+                        "definition": "The Primary Occupation Description is the client's Position or job title at employer selected from a list of LPL supplied values."
+                    },
+                    {
+                        "name": "Prior Investment Experience Indicator",
+                        "definition": "The Prior Investment Experience Indicator is the indicates if the Investor has experience with various asset classes, represented in years."
+                    },
+                    {
+                        "name": "Retired Indicator",
+                        "definition": "The Employment Status is the investor's employment status at the time of application for an account or service."
+                    },
+                    {
+                        "name": "Secondary Occupation Description",
+                        "definition": "The Secondary Occupation Description is the second Occupation where applicable."
+                    },
+                    {
+                        "name": "Sex Code",
+                        "definition": "The Sex Code is one of four codes specified in ISO/IEC 5218, which are: 0 = Not known; 1 = Male; 2 = Female; 9 = Not applicable. The standard specifies that its use may be referred to by the designator 'SEX'."
+                    },
+                    {
+                        "name": "Source of Wealth Label",
+                        "definition": "The Source of Wealth Label is the source of Wealth, also known as 'Source of Funds'. This identifies the primary source of funds being invested by the client and whose value is selected from a company defined list of common sources. The category of 'Other' required an additional text description of the source. This is not the source of funds relating to retirement accounts."
+                    },
+                    {
+                        "name": "Source of Wealth Other Description",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Suffix Name",
+                        "definition": "The Suffix Name is the a generational title that is applied to the end of a person's full name for the purpose of generational distinction when more than one person in a family, clan or group has the same given name(s) and surname. Generally referred to as generational suffix which includes Sr., Jr., I, II, III, IV, etc"
+                    },
+                    {
+                        "name": "Suitability Add Date",
+                        "definition": "A Date is a calendar date that may be represented in the form of 'YYYY-MM-DD'. [YYYY] indicates a four-digit year, 0000 through 9999. [MM] indicates a two-digit month of the year, 01 through 12. [DD] indicates a two-digit day of that month, 01 through 31."
+                    },
+                    {
+                        "name": "Tax Bracket Label",
+                        "definition": "The Tax Bracket Label is the firm-defined code that identifies the tax bracket for the investor."
+                    },
+                    {
+                        "name": "Years Employed",
+                        "definition": "The Years Employed is the number of years the client has been employed with the current employer."
+                    },
+                    {
+                        "name": "Government ID Number",
+                        "definition": "The Government ID Number is the government-issued identification number."
+                    },
+                    {
+                        "name": "Government ID Type Code",
+                        "definition": "The Government ID Type Code identifies the type of Government ID for the provided identification number. Valid values are noted below: Social Security Number Federal Taxpayers Identification Number Canadian Social Insurance Number Non-resident Alien Number National ID Number Passport Number Three-digit Plan Number (PN)"
+                    }
+                ]
+            },
+            {
+                "name": "Investor Regulatory",
+                "attributes": [
+                    {
+                        "name": "Regulatory Type",
+                        "definition": "The Regulatory Type is the description of the regulatory body or requirement being associated with the Investor. Values to be stored may be like: 'OFAC', Persons of Interest, Politically Exposed Person, etc."
+                    },
+                    {
+                        "name": "Regulatory Value",
+                        "definition": "The Regulatory Value is the alpha-numeric value provided by the regulatory body to be associated with the Investor."
+                    },
+                    {
+                        "name": "Risk Review Indicator",
+                        "definition": "The indicator whether the account has been reviewed and poses a risk based upon review by your firm's compliance department."
+                    },
+                    {
+                        "name": "Suspicious Activity Report Date",
+                        "definition": "The date on which a SAR (Suspicious Activity Report) was filed for the individual or non-individual for the demographic record."
+                    }
+                ]
+            },
+            {
+                "name": "Trust",
+                "attributes": [
+                    {
+                        "name": "Governing State Code",
+                        "definition": "The State Code is a means to identify a subnational entity by ISO 3166-2 part 2 code. It is an extension of the USPS State Code that represents one of the 50 U.S. States, 6 underlying areas (territories or commonwealths), District of Columbia, and 3 Military Army Post/Fleet Posts."
+                    },
+                    {
+                        "name": "Trust Established By",
+                        "definition": "The name of the person who made the trust, also referred to as the Grantor."
+                    },
+                    {
+                        "name": "Trust Established Date",
+                        "definition": "The Date the Trust was established."
+                    },
+                    {
+                        "name": "Trust Revocable Indicator",
+                        "definition": "A value to differentiate various types of Trusts. Values may include Revocable, Irrevocable."
+                    },
+                    {
+                        "name": "Trust Amendable by",
+                        "definition": "The name of the person who can amend the Trust."
+                    },
+                    {
+                        "name": "Trust Amended Indicator",
+                        "definition": "A flag indicating if the trust has been amended."
+                    },
+                    {
+                        "name": "Trust Revocable By",
+                        "definition": "The name of the person who can revoke the Trust."
+                    }
+                ]
+            },
+            {
+                "name": "Trusted Contact Party",
+                "attributes": [
+                    {
+                        "name": "City Name",
+                        "definition": "The designator for a place name, a second level geopolitical area accepted by the specific postal authority, such as the United States Postal Service (USPS), where the first level geopolitical area is State Code, and may be associated to a Postal Code. The USPS designates one preferred place name for each ZIP Code."
+                    },
+                    {
+                        "name": "Country Code",
+                        "definition": "A means to uniquely identify a country, a region that is identified as a distinct sovereign entity and geopolitical area. An ISO 3166 Alpha-2 code (“US”) will be utilized for the representation of a country code."
+                    },
+                    {
+                        "name": "Delivery Line 1 Text",
+                        "definition": "A group of attributes that consists of: Primary Address Number, Pre-directional Code (optional), Street Name, Street Suffix Code, Post-directional Code (optional), Secondary Address Designator/Identifier Code (optional), Secondary Address Number (optional). Alternatively, the recipient may use a PO Box instead of these parts in certain contexts."
+                    },
+                    {
+                        "name": "Delivery Line 2 Text",
+                        "definition": "A group of attributes, as an overflow from Delivery Line 1 Text, that consists of: Secondary Address Designator(s)/Identifier(s), Secondary Address Number(s)."
+                    },
+                    {
+                        "name": "Email Address Text",
+                        "definition": "A means to identify an individual electronic mailbox for the purpose of sending an electronic message from one electronic mailbox to another."
+                    },
+                    {
+                        "name": "Email Type Code",
+                        "definition": "Identifies the designated usage of a specific Email address. Valid values are Personal, Business, etc."
+                    },
+                    {
+                        "name": "First Name",
+                        "definition": "The given name or forename of a person that is used to distinguish one person from another in a group, family, or clan with the same surname."
+                    },
+                    {
+                        "name": "Last Name",
+                        "definition": "The paternal surname given to a person in addition to a given name (forename) and an optional given middle name."
+                    },
+                    {
+                        "name": "Middle Name",
+                        "definition": "A letter or word that is a second given name to a person and is between the given name (forename) and the last name (surname)."
+                    },
+                    {
+                        "name": "Party Type Code",
+                        "definition": "A means to identify a specific party as either a person or an organization."
+                    },
+                    {
+                        "name": "Phone Number",
+                        "definition": "A unique sequence of numbers assigned to a Residential telephone line, a business telephone line, or mobile device for the purpose of telecommunications."
+                    },
+                    {
+                        "name": "Phone Type Code",
+                        "definition": "Identifies the designated usage of a phone number that is associated with a telephone line or telecommunications device of the beneficiary. Valid values: Beeper Number, Cellular Phone, Facsimile, Home Phone Number, Telephone, Work Phone Number, Business Phone."
+                    },
+                    {
+                        "name": "Postal Code",
+                        "definition": "A series of letters, or digits, or both that is associated with a geographical area or large institution that receives volumes of mail and is utilized as part of an address to aid in the sorting of mail."
+                    },
+                    {
+                        "name": "State Code",
+                        "definition": "A means to identify a subnational entity by ISO 3166-2 part 2 code. It is an extension of the USPS State Code that represents one of the 50 U.S. States, 6 underlying areas (territories or commonwealths), District of Columbia, and 3 Military Army Post/Fleet Posts."
+                    },
+                    {
+                        "name": "Trusted Contact Decline Date",
+                        "definition": "The date on which a Trusted Contact declined."
+                    },
+                    {
+                        "name": "Trusted Contact Party Address UID",
+                        "definition": "A surrogate key attribute identifying an instance of an Address for a Party who is a Trusted Contact."
+                    },
+                    {
+                        "name": "Trusted Contact Party Email UID",
+                        "definition": "A surrogate key attribute identifying an instance of an Email for a Party who is a Trusted Contact."
+                    },
+                    {
+                        "name": "Trusted Contact Party Phone UID",
+                        "definition": "A surrogate key attribute identifying an instance of a Phone for a Party who is a Trusted Contact."
+                    },
+                    {
+                        "name": "Trusted Contact Party UID",
+                        "definition": "A surrogate key attribute identifying an instance of a Party who is a Trusted Contact."
+                    },
+                    {
+                        "name": "Trusted Contact Relationship Label",
+                        "definition": "A means to identify how the Investor and the Trusted Contact know of each other."
+                    },
+                    {
+                        "name": "US Foreign Indicator",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Trusted Contact Address Type Code",
+                        "definition": "A means to identify the designated usage of an address that is associated with an individual person, person within an organization, or organization itself. Generally, an address is designated as Residential Address, Business Address, and Mailing Address."
+                    }
+                ]
+            }
         ],
         "waltz": "http://10.124.192.192:8443/data-types/2",
         "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59882864897"
@@ -321,13 +1174,408 @@
             522
         ],
         "description": "The Account Subject Area encompasses the details specific to all types of Investment Accounts, including custodied brokerage and advisory accounts, direct business accounts, TAMP accounts, and bank trust accounts.",
-        "attributes": [
-            "Account ID",
-            "Account ID",
-            "Investor IDs",
-            "Advisor IDs",
-            "Contract IDs",
-            "Core Account Data"
+        "concepts": [
+            {
+                "name": "Account",
+                "attributes": [
+                    {
+                        "name": "Account Close Date",
+                        "definition": "The date the account was closed."
+                    },
+                    {
+                        "name": "Account Mailing Address UID",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Account Open Date",
+                        "definition": "The date the account was opened."
+                    },
+                    {
+                        "name": "Account Status Label",
+                        "definition": "Indicates a condition of the account active, deactivated, or closed."
+                    },
+                    {
+                        "name": "Account Type Label",
+                        "definition": "Identifies the type of account such as 'Custodied Account'."
+                    },
+                    {
+                        "name": "Account UID",
+                        "definition": "A unique Identifier of an account."
+                    },
+                    {
+                        "name": "City Name",
+                        "definition": "The designator for a place name, a second level geopolitical area accepted by the specific postal authority, such as the United States Postal Service (USPS), where the first level geopolitical area is State Code, and may be associated to a Postal Code. The USPS designates one preferred place name for each ZIP Code."
+                    },
+                    {
+                        "name": "Country Code",
+                        "definition": "A means to uniquely identify a country, a region that is identified as a distinct sovereign entity and geopolitical area. An ISO 3166 Alpha-2 code (“US”) will be utilized for the representation of a country code."
+                    },
+                    {
+                        "name": "Delivery Line 1 Text",
+                        "definition": "A group of attributes that consists of: Primary Address Number, Pre-directional Code (optional), Street Name, Street Suffix Code, Post-directional Code (optional), Secondary Address Designator/Identifier Code (optional), Secondary Address Number (optional). Alternatively, the recipient may use a PO Box instead of these parts in certain contexts."
+                    },
+                    {
+                        "name": "Delivery Line 2 Text",
+                        "definition": "A group of attributes, as an overflow from Delivery Line 1 Text, that consists of: Secondary Address Designator(s)/Identifier(s), Secondary Address Number(s)."
+                    },
+                    {
+                        "name": "Introducing Broker Dealer Code",
+                        "definition": "The acronym which delineates between LPL Financial (LPL), Equitable (EQH, previously AXA), and LPL Enterprise (LPE). Also known as Subfirm in the BETA system."
+                    },
+                    {
+                        "name": "Investment Objective Label",
+                        "definition": "The Investment Objective Description indicates the Investment Objective of the Custodied Account which identifies the acceptable risk and desired return on investments."
+                    },
+                    {
+                        "name": "Investment Time Horizon Label",
+                        "definition": "The Investment Time Horizon Label identifies the investments expected time frame."
+                    },
+                    {
+                        "name": "Liquidity Timeframe Label",
+                        "definition": "The Liquidity Timeframe Label is the number of years when Liquidity Needs are expected to be met following the date on which an Account is opened."
+                    },
+                    {
+                        "name": "Postal Code",
+                        "definition": "A series of letters, or digits, or both that is associated with a geographical area, or large institution that receives volumes of mail, and is utilized as part of an address to aid in the sorting of mail."
+                    },
+                    {
+                        "name": "Previous Firm Account Number",
+                        "definition": "The Previous Account Number is a unique account identifier from the Previous Broker Dealer Firm."
+                    },
+                    {
+                        "name": "Previous Firm Name",
+                        "definition": "The Previous Firm Name is the name for the Previous Broker Dealer Firm. Examples: Credit Union National Association, People's United Bank."
+                    },
+                    {
+                        "name": "Primary Account Holder UID",
+                        "definition": "The Unique Identifier of the Primary Account Holder."
+                    },
+                    {
+                        "name": "Registered Rep ID",
+                        "definition": "The Registered Rep ID is an identifier which is associated to one or more Financial Advisors (depending on the type of Rep ID)."
+                    },
+                    {
+                        "name": "State Code",
+                        "definition": "A means to identify a subnational entity by ISO 3166-2 part 2 code. It is an extension of the USPS State Code that represents one of the 50 U.S. States, 6 underlying areas (territories or commonwealths), District of Columbia, and 3 Military Army Post/Fleet Posts."
+                    },
+                    {
+                        "name": "Reported Account Amount",
+                        "definition": "The approximated total value of the account at Account Opening."
+                    }
+                ]
+            },
+            {
+                "name": "Account Beneficiary Party",
+                "attributes": [
+                    {
+                        "name": "Beneficiary Designation Label",
+                        "definition": "Identifies the type of beneficiary being maintained such as 'Primary', 'Contingent', 'Owner' and/or 'Successor Owner'."
+                    },
+                    {
+                        "name": "Beneficiary Party Address UID",
+                        "definition": "A surrogate key attribute which identifies an instance of an Address for a Party who is an Account Beneficiary."
+                    },
+                    {
+                        "name": "Beneficiary Party Email UID",
+                        "definition": "A surrogate key attribute which identifies an instance of an Email for a Party who is an Account Beneficiary."
+                    },
+                    {
+                        "name": "Beneficiary Party UID",
+                        "definition": "A surrogate key attribute which identifies an instance of a Party who is an Account Beneficiary."
+                    },
+                    {
+                        "name": "Beneficiary Percent",
+                        "definition": "The percentage of the account value entitled to this beneficiary upon a triggering event such as the death of the Account Holder."
+                    },
+                    {
+                        "name": "Beneficiary Phone UID",
+                        "definition": "A surrogate key attribute which identifies an instance of a Phone for a Party who is an Account Beneficiary."
+                    },
+                    {
+                        "name": "Beneficiary Relationship Label",
+                        "definition": "The description of the relationship to the Primary Account Holder."
+                    },
+                    {
+                        "name": "Beneficiary Subtype Label",
+                        "definition": "Further defines the type and role of the beneficiary. Valid Values: Corporation, Trust, Plan, Limited Liability Corporation, Partnership, Estate, Assignee, Custodial, Non-Profit Organization, Sole-Proprietorship, Government, Charitable Organization, Charitable Remainder Trust, UGMA/UTMA, Grantor Trust, Non-Grantor Trust."
+                    },
+                    {
+                        "name": "Beneficiary UID",
+                        "definition": "The unique identifier of a Beneficiary."
+                    },
+                    {
+                        "name": "Birth Date",
+                        "definition": "The year, calendar month, and day upon which a person was born."
+                    },
+                    {
+                        "name": "City Name",
+                        "definition": "The designator for a place name, a second level geopolitical area accepted by the specific postal authority, such as the United States Postal Service (USPS)."
+                    },
+                    {
+                        "name": "Country Code",
+                        "definition": "A means to uniquely identify a country, a region that is identified as a distinct sovereign entity and geopolitical area."
+                    },
+                    {
+                        "name": "Custom Beneficiary Indicator",
+                        "definition": "Identifies if the beneficiary is a custom beneficiary that does not follow standard beneficiary definition."
+                    },
+                    {
+                        "name": "Delivery Line 1 Text",
+                        "definition": "A group of attributes that consists of: Primary Address Number, Pre-directional Code (optional), Street Name, Street Suffix Code, Post-directional Code (optional), Secondary Address Designator/Identifier Code (optional), Secondary Address Number (optional). Alternatively, the recipient may use a PO Box instead of these parts in certain contexts."
+                    },
+                    {
+                        "name": "Delivery Line 2 Text",
+                        "definition": "A group of attributes, as an overflow from Delivery Line 1 Text, that consists of: Secondary Address Designator(s)/Identifier(s), Secondary Address Number(s)."
+                    },
+                    {
+                        "name": "Email Address Text",
+                        "definition": "A means to identify an individual electronic mailbox for the purpose of sending an electronic message from one electronic mailbox to another."
+                    },
+                    {
+                        "name": "Email Type Code",
+                        "definition": "Identifies the designated usage of a specific Email address. Valid values are Personal, Business, etc."
+                    },
+                    {
+                        "name": "Expected College Entry Date",
+                        "definition": "Beneficiary Expected College Entry Date (For Person)."
+                    },
+                    {
+                        "name": "Extension Number",
+                        "definition": "A secondary unique sequence of numbers associated with a Business Phone Number for the purpose of reaching a specific individual within an organization."
+                    },
+                    {
+                        "name": "First Name",
+                        "definition": "The given name or forename of a person."
+                    },
+                    {
+                        "name": "Last Name",
+                        "definition": "The paternal surname given to a person in addition to a given name (forename) and an optional given middle name."
+                    },
+                    {
+                        "name": "Party Type Code",
+                        "definition": "A means to identify a specific party as either a person or an organization."
+                    },
+                    {
+                        "name": "Per Stirpe Indicator",
+                        "definition": "Defines how the Account value share is to be processed upon the account holder's death in the scenario where the beneficiary predeceased the account holder."
+                    },
+                    {
+                        "name": "Phone Number",
+                        "definition": "A unique sequence of numbers assigned to a Residential telephone line, a business telephone line, or mobile device for the purpose of telecommunications."
+                    },
+                    {
+                        "name": "Phone Type Code",
+                        "definition": "Identifies the designated usage of a phone number that is associated with a telephone line or telecommunications device of the beneficiary."
+                    },
+                    {
+                        "name": "Postal Code",
+                        "definition": "A series of letters, or digits, or both that is associated with a geographical area, or large institution that receives volumes of mail."
+                    },
+                    {
+                        "name": "Prefix Name",
+                        "definition": "The honorific that is applied prior to a person’s given name for the purpose of respect of marriage, academic or designation typically used in written communications."
+                    },
+                    {
+                        "name": "State Code",
+                        "definition": "A means to identify a subnational entity by ISO 3166-2 part 2 code."
+                    },
+                    {
+                        "name": "Suffix Name",
+                        "definition": "The generational title that is applied to the end of a person's full name for the purpose of generational distinction."
+                    },
+                    {
+                        "name": "Trust Revocable Indicator",
+                        "definition": "The Revocable Indicator identifies if a trust beneficiary is a revocable trust. If so, this attribute would be set to 'Y'. If irrevocable, this would be set to 'N'."
+                    },
+                    {
+                        "name": "Beneficiary Address Type Code",
+                        "definition": "The Address Type Code is a means to identify the designated usage of an address that is associated to an individual person, person within an organization, or organization itself."
+                    },
+                    {
+                        "name": "Government ID Number",
+                        "definition": "The government-issued identification number."
+                    },
+                    {
+                        "name": "Government ID Type Code",
+                        "definition": "The Government ID Type Code identifies the type of Government ID for the provided identification number. Valid values are Social Security Number, Federal Taxpayers Identification Number, Canadian Social Insurance Number, Non-resident Alien Number, National ID Number, Passport Number, Three-digit Plan Number (PN)."
+                    }
+                ]
+            },
+            {
+                "name": "Custodied Account Core",
+                "attributes": [
+                    {
+                        "name": "Account Ownership Label",
+                        "definition": "Defines the account ownership as: Individual, Joint or Entity."
+                    },
+                    {
+                        "name": "Account Program Group Label",
+                        "definition": "Defines the type of Custodied Account as using Advisory or Brokerage services."
+                    },
+                    {
+                        "name": "Account Registration Name Line Number",
+                        "definition": "The line number of the Account's Registration Block."
+                    },
+                    {
+                        "name": "Account Registration Name Line Text",
+                        "definition": "The text associated with the line number of the Account's Registration Block."
+                    },
+                    {
+                        "name": "Account Registration Type Label",
+                        "definition": "Identifies the purpose of the Account. For example: Individual Account, Investment Club, Beneficiary IRA."
+                    },
+                    {
+                        "name": "Account Tax Category Label",
+                        "definition": "Defines the Account as being for Retirement or Non-Retirement Investments."
+                    },
+                    {
+                        "name": "Advisory Account Platform Label",
+                        "definition": "The name of the program. Examples: Strategic Wealth Management, Guided Wealth Portfolios."
+                    },
+                    {
+                        "name": "Clearing Firm Account Number",
+                        "definition": "The unique, 8-digit, numeric identifier for a Custodied Account."
+                    },
+                    {
+                        "name": "IRS Name Reporting Label",
+                        "definition": "Reflects if the instance/record holds the 1st name reported to the IRS for the account or the second name reported to the IRS."
+                    },
+                    {
+                        "name": "Legacy Account Class Label",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Legacy Account Registration Label",
+                        "definition": "(blank)"
+                    }
+                ]
+            },
+            {
+                "name": "Custodied Account Document",
+                "attributes": [
+                    {
+                        "name": "Delinquent Days Count",
+                        "definition": "The number of days after a document is added to an account with a status of 'required' until the document is considered delinquent if the document has not yet been received."
+                    },
+                    {
+                        "name": "Document Description",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Document ID",
+                        "definition": "A unique identifier of a document on the account."
+                    },
+                    {
+                        "name": "Document Note Date",
+                        "definition": "The datetime reflecting the date of the add or update of a note."
+                    },
+                    {
+                        "name": "Document Note Text",
+                        "definition": "A free-form note added to the document note."
+                    },
+                    {
+                        "name": "Document Purpose Label",
+                        "definition": "Defines the business purpose of the document such as used for new accounts, used on collateral loans, etc."
+                    },
+                    {
+                        "name": "Document Signed Date",
+                        "definition": "The date the document was signed by the required party."
+                    },
+                    {
+                        "name": "Document Status Code",
+                        "definition": "Represents the status of the document."
+                    },
+                    {
+                        "name": "Document Status Date",
+                        "definition": "The date the status of the document was last changed."
+                    },
+                    {
+                        "name": "Document Type Code",
+                        "definition": "Identifies the type of document to be maintained with an account."
+                    },
+                    {
+                        "name": "Document Type Description",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Multi Active Document Indicator",
+                        "definition": "Determines if the document can have multiple active versions on an account."
+                    },
+                    {
+                        "name": "Recertification Months Count",
+                        "definition": "The number of months since a document was received on an account until a recertification of that document is required."
+                    },
+                    {
+                        "name": "Reminder Days Count",
+                        "definition": "The number of days after a document is added to an account with a status of 'required' until a reminder is sent to the required party if the document has not yet been received."
+                    },
+                    {
+                        "name": "Sequence Number",
+                        "definition": "Identifies when more than one note exists for a document on an account, this attribute determines the sequence of the notes."
+                    }
+                ]
+            },
+            {
+                "name": "Custodied Account Extended",
+                "attributes": [
+                    {
+                        "name": "Bond Commission Schedule Number",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Cash Debit Override Label",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Cash Money Instruction Label",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Cash Stock Instruction Label",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Dividend Instruction Label",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Dividend Reinvestment Label",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Margin Money Instruction Label",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Margin Stock Instruction Label",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Option Commission Schedule Number",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Owner Disclosure Label",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Postage Charge Amount",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Principal Instruction Indicator",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Stock Commission Schedule Number",
+                        "definition": "(blank)"
+                    },
+                    {
+                        "name": "Sweep Instruction Label",
+                        "definition": "(blank)"
+                    }
+                ]
+            }
         ],
         "waltz": "http://10.124.192.192:8443/data-types/3",
         "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59882569935"

@@ -15,7 +15,6 @@ body {
 a {
   text-decoration: none;
   color: black;
-  border: 2px solid black;
   padding: 0.5em;
 }
 
@@ -162,4 +161,51 @@ a:hover {
 .onboarding-step-selected {
   background-color: #CCE3FF;
   color: #0F1D4B;
+}
+
+.concept-button {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid #3498db;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #3498db;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.concept-button:hover {
+  background-color: #2980b9;
+  color: #ffffff;
+}
+
+.attribute-button {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid #27ae60;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #27ae60;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.attribute-button:hover {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+
+.attribute-button.selected {
+  background-color: #2ecc71;
+  color: #ffffff;
 }

@@ -7,30 +7,35 @@ const Modal = ({ area, onClose }) => {
     const handleConceptClick = (concept) => {
         setSelectedConcept(selectedConcept === concept ? null : concept)
         setSelectedAttribute(null)
-    };
+    }
 
     const handleAttributeClick = (attribute) => {
-        setSelectedAttribute(attribute)
-    };
+        setSelectedAttribute(selectedAttribute === attribute ? null : attribute);
+    }
 
     const renderConcepts = () => {
         return area.concepts?.map((concept, index) => (
             <div key={index}>
-                <button onClick={() => handleConceptClick(concept.name)}>
+                <button className="concept-button" onClick={() => handleConceptClick(concept.name)}>
                     {concept.name}
                 </button>
                 {selectedConcept === concept.name && renderAttributes(concept.attributes)}
             </div>
-        ));
-    };
+        ))
+    }
 
     const renderAttributes = (attributes) => {
         return attributes.map((attribute, index) => (
-            <button key={index} onClick={() => handleAttributeClick(attribute)}>
+            <button
+                className={`attribute-button ${selectedAttribute === attribute ? 'selected' : ''}`}
+                key={index}
+                onClick={() => handleAttributeClick(attribute)}
+            >
                 {attribute.name}
             </button>
-        ));
-    };
+        ))
+    }
+
 
     const handleBackClick = () => {
         setSelectedConcept(null);

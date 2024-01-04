@@ -34,7 +34,7 @@ function Edm() {
             'Investor Onboarding': [
                 'LPL Receives Account Analysis Info',
                 'De-conversion Files Received',
-                'Comparison of Model Spreadsheet Begins 3b. Collect & Fill Gaps',
+                'Comparison of Model Spreadsheet Begins -> Collect & Fill Gaps',
                 'Advisors Create & Fill Data Requirements',
                 'De-conversion Files Evaluated',
                 'Non-Financial Conversion',

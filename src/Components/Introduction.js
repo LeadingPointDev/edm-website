@@ -60,7 +60,8 @@ function Introduction() {
 
             <p>Lastly, <span class="orange">we are tracking progress</span>, both in terms of execution as well as the business outcomes and experiences enabled by the new foundation</p>
 
-            <p> Martin Lamb Data CIO</p>
+            <p>Nitesh Ambastha CIO</p>
+            <p>Martin Lamb</p>
             <h2 class="title">Data strategy is aimed at solving critical client issues</h2>
             <img class="image" src={landing1} />
             <h2 class="title">Data Foundations -- designed to support all business activities</h2>

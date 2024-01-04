@@ -11,7 +11,7 @@ import QuickLinks from "./Components/QuickLinks";
 
 function App() {
   return (
-    <BrowserRouter basename="/edm-website/">
+    <BrowserRouter basename="/">
       <div className="container">
         <Navbar />
         <Routes>
