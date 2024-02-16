@@ -209,3 +209,30 @@ a:hover {
   background-color: #2ecc71;
   color: #ffffff;
 }
+
+.back-button {
+  display: block;
+  margin-bottom: 10px;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 2px white;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer
+}
+
+.back-button::before {
+  content: '\2190';
+  margin-right: 5px;
+}
+
+.download-button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px
+}

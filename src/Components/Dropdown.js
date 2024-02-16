@@ -5,7 +5,7 @@ const Dropdown = ({ onUseCaseChange, onStepClick, stepsByUseCase }) => {
     const [currentStep, setCurrentStep] = useState(null)
 
     const options = [
-        'Select a Use Case',
+        'EDM (Default View)',
         'Advisor Onboarding',
         'Investor Onboarding',
         'Annuity Opening',
@@ -13,6 +13,8 @@ const Dropdown = ({ onUseCaseChange, onStepClick, stepsByUseCase }) => {
     ];
 
     const descriptions = {
+        'EDM (Default View)':
+            'Select a use case scenario to view the associated data model and path.',
         'Advisor Onboarding':
             'Below are the primary steps and data model flow for onboarding an individual advisor.',
         'Investor Onboarding':

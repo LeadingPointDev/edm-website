@@ -49,8 +49,8 @@ const Modal = ({ area, onClose }) => {
                     Close
                 </button>
                 <h2>{area.title}</h2>
-                <a href={area.waltz}>Waltz Link</a>
-                <a href={area.confluence}>Confluence Link</a>
+                <a href={area.waltz} target="_blank">Waltz Link</a>
+                <a href={area.confluence} target="_blank">Confluence Link</a>
                 {!selectedConcept ? (
                     <>
                         <h3>Description</h3>
@@ -63,8 +63,8 @@ const Modal = ({ area, onClose }) => {
                     </>
                 ) : (
                     <>
-                        <button onClick={handleBackClick}>Back</button>
                         <h3>EDM Concept: {selectedConcept}</h3>
+                        <button className="back-button" onClick={handleBackClick}>Concept View</button>
                         {renderAttributes(area.concepts.find(concept => concept.name === selectedConcept)?.attributes)}
                         {selectedAttribute ? (
                             <p>{selectedAttribute.definition}</p>

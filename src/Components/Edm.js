@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Mapper from "./Mapper"
 import Dropdown from "./Dropdown"
 
@@ -80,6 +81,9 @@ function Edm() {
                     on the subject area to see further details.
                 </li>
             </ul>
+            {/* <button className="download-button">
+                <Link to={`${process.env.PUBLIC_URL}/EDM Data Dictionary Snapshot_11.2023.xlsx`} target="_blank" download>
+                    Click here to download the EDM Data Dictionary</Link></button> */}
             <Dropdown onUseCaseChange={handleUseCaseChange} onStepClick={handleStepClick} stepsByUseCase={stepsByUseCase}></Dropdown>
             <Mapper selectedUseCase={useCase} selectedStep={currentStep} stepsByUseCase={stepsByUseCase}></Mapper>
         </div >
