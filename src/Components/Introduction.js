@@ -1,4 +1,3 @@
-import landing1 from '../landing1.png'
 const data = [
     {
         topic: 'Client Insights & Product Personalization​',
@@ -53,17 +52,13 @@ function Introduction() {
             </ul>
             <p>As we have moved into execution,<span class="orange"> we are focused on leading with commercial value</span>, and have prioritized three strategic initiatives that represent critical enablers of scale:​</p>
             <ul>
-                <li><span class="orange">Supporting a real-time intraday view of trading activity</span> to allow our ClientWorks Rebalancer platform (Blaze) to continue to scale</li>
-                <li><span class="orange">Enabling standardization and scale of annuities</span> for our Direct Business line to reduce operational overhead​</li>
+                <li><span class="orange">Enhancing real-time monitoring of intraday trading activity</span>to support scalable solutions for portfolio rebalancing</li>
+                <li><span class="orange">Facilitating the standardization and scalability of annuities</span> across our business lines to streamline operational efficiency​</li>
                 <li><span class="orange">Creating the fundamental elements for “treat me like a business”</span> from which personalization can be built across our digital platforms</li>
             </ul>
 
             <p>Lastly, <span class="orange">we are tracking progress</span>, both in terms of execution as well as the business outcomes and experiences enabled by the new foundation</p>
 
-            <p>Nitesh Ambastha CIO</p>
-            <p>Martin Lamb</p>
-            <h2 class="title">Data strategy is aimed at solving critical client issues</h2>
-            <img class="image" src={landing1} />
             <h2 class="title">Data Foundations -- designed to support all business activities</h2>
             <table className="table">
                 <tbody>

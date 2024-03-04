@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-import React, { useState } from 'react'
-
 const Modal = ({ area, onClose }) => {
     const [selectedConcept, setSelectedConcept] = useState(null)
     const [selectedAttribute, setSelectedAttribute] = useState(null)

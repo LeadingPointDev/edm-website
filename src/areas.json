@@ -11,18 +11,18 @@
             629,
             159
         ],
-        "description": "The Party Subject Area encompasses core information which is common to all Parties. A Party is defined as any Person or Organization who interacts with LPL in one or more roles and who has a Name and at least one method of contact information (such as Address, Phone, and/or Email). Party Roles for a Person include, but are not limited to, Advisor, Licensed Assistant, Non-Licensed Assistant, Investor, and Employee, etc. Party Roles for an Organization include, but are not limited to, Institution, RIA Firm, etc. A Party may play multiple roles as a Person or Organization, but a Party cannot be both a Person and an Organization. This subject area represents a single source of truth for a Party even in cases where multiple roles exist for the same Party, and/or when data is available from multiple sources and needs to be mastered.",
+        "description": "The Party Subject Area encompasses core information which is common to all Parties. A Party is defined as any Person or Organization who interacts with the company in one or more roles and who has a Name and at least one method of contact information (such as Address, Phone, and/or Email). Party Roles for a Person include, but are not limited to, Advisor, Licensed Assistant, Non-Licensed Assistant, Investor, and Employee, etc. Party Roles for an Organization include, but are not limited to, Institution, RIA Firm, etc. A Party may play multiple roles as a Person or Organization, but a Party cannot be both a Person and an Organization. This subject area represents a single source of truth for a Party even in cases where multiple roles exist for the same Party, and/or when data is available from multiple sources and needs to be mastered.",
         "concepts": [
             {
                 "name": "Party",
                 "attributes": [
                     {
                         "name": "Party End Date",
-                        "definition": "The Party End Date is the date on which a person or organization is no longer active in any role in LPL."
+                        "definition": "The Party End Date is the date on which a person or organization is no longer active in any role in the company."
                     },
                     {
                         "name": "Party Start Date",
-                        "definition": "The Party Start Date is the date on which a person or organization is first known to LPL in any role."
+                        "definition": "The Party Start Date is the date on which a person or organization is first known to the company in any role."
                     },
                     {
                         "name": "Party Type Code",
@@ -206,13 +206,13 @@
             }
         ],
         "stakeholders": [
-            "Domain Analysts: Jennifer Andrews",
-            "Domain Modelers: Todd Owens",
-            "Data Product Team: Andrea Allmon, Sam Patel",
+            "Domain Analysts: John Smith",
+            "Domain Modelers: Jane Doe",
+            "Data Product Team: To Be Named",
             "Stakeholders and SMEs: To Be Named"
         ],
-        "waltz": "http://10.124.192.192:8443/data-types/100001",
-        "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59820901476"
+        "waltz": "",
+        "confluence": ""
     },
     {
         "title": "Organization",
@@ -246,11 +246,11 @@
                 "attributes": [
                     {
                         "name": "Advisor Party End Date",
-                        "definition": "The Advisor Party End Date is the date on which an Advisor Party is no longer active with LPL."
+                        "definition": "The Advisor Party End Date is the date on which an Advisor Party is no longer active with the company."
                     },
                     {
                         "name": "Advisor Party Start Date",
-                        "definition": "The Advisor Party Start Date is the date on which an Advisor Party first became known to LPL."
+                        "definition": "The Advisor Party Start Date is the date on which an Advisor Party first became known to the company."
                     },
                     {
                         "name": "Advisor Party UID",
@@ -258,7 +258,7 @@
                     },
                     {
                         "name": "Introducing Broker Dealer Code",
-                        "definition": "The Introducing Broker Dealer Code is the acronym which delineates between LPL Financial (LPL), Equitable (EQH, previously AXA), and LPL Enterprise (LPE). Also known as Subfirm in the BETA system."
+                        "definition": "The Introducing Broker Dealer Code is the acronym which delineates between the company Financial (the company), Equitable (EQH, previously AXA), and the company Enterprise (LPE). Also known as Subfirm in the BETA system."
                     },
                     {
                         "name": "Party Type Code",
@@ -460,8 +460,8 @@
                 ]
             }
         ],
-        "waltz": "http://10.124.192.192:8443/data-types/1",
-        "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59713716465"
+        "waltz": "",
+        "confluence": ""
     },
     {
         "title": "Investor",
@@ -543,7 +543,7 @@
                     },
                     {
                         "name": "Introducing Broker Dealer Code",
-                        "definition": "The Introducing Broker Dealer Code is the acronym which delineates between LPL Financial (LPL), Equitable (EQH, previously AXA), and LPL Enterprise (LPE). Also known as Subfirm in the BETA system."
+                        "definition": "The Introducing Broker Dealer Code is the acronym which delineates between the company Financial (the company), Equitable (EQH, previously AXA), and the company Enterprise (LPE). Also known as Subfirm in the BETA system."
                     },
                     {
                         "name": "Investor Party Address UID",
@@ -661,7 +661,7 @@
                     },
                     {
                         "name": "Organization Industry Label",
-                        "definition": "Industry Label is the LPL classification of an organization's primary line of business."
+                        "definition": "Industry Label is the the company classification of an organization's primary line of business."
                     },
                     {
                         "name": "Organization Type Label",
@@ -850,27 +850,27 @@
                     },
                     {
                         "name": "Investment Experience Annuities Years",
-                        "definition": "The Annuities Years is the number of years the investor party has investing with Annuities. (With LPL or without LPL). Value must be NULL or 1-100. (Zero is not allowed.)"
+                        "definition": "The Annuities Years is the number of years the investor party has investing with Annuities. (With the company or without the company). Value must be NULL or 1-100. (Zero is not allowed.)"
                     },
                     {
                         "name": "Investment Experience Bonds Years",
-                        "definition": "The Bonds Years is the number of years the investor party has investing with Bonds. (With LPL or without LPL)."
+                        "definition": "The Bonds Years is the number of years the investor party has investing with Bonds. (With the company or without the company)."
                     },
                     {
                         "name": "Investment Experience Equities Years",
-                        "definition": "The Equities Years is the number of years the investor party has investing with Equities. (With LPL or without LPL)."
+                        "definition": "The Equities Years is the number of years the investor party has investing with Equities. (With the company or without the company)."
                     },
                     {
                         "name": "Investment Experience Margin Years",
-                        "definition": "The Margin Years is the number of years the investor party has investing with Margin. (With LPL or without LPL)."
+                        "definition": "The Margin Years is the number of years the investor party has investing with Margin. (With the company or without the company)."
                     },
                     {
                         "name": "Investment Experience Mutual Funds Years",
-                        "definition": "The Mutual Funds Years is the number of years the investor party has investing with Mutual Funds. (With LPL or without LPL)."
+                        "definition": "The Mutual Funds Years is the number of years the investor party has investing with Mutual Funds. (With the company or without the company)."
                     },
                     {
                         "name": "Investment Experience Options Years",
-                        "definition": "The Options Years is the number of years the investor party has investing with Options. (With LPL or without LPL)."
+                        "definition": "The Options Years is the number of years the investor party has investing with Options. (With the company or without the company)."
                     },
                     {
                         "name": "Investment Experience Other Investment Explanation",
@@ -878,11 +878,11 @@
                     },
                     {
                         "name": "Investment Experience Other Investment Years",
-                        "definition": "The Other Investment Years is the number of years the investor party has investing with Other. (With LPL or without LPL)."
+                        "definition": "The Other Investment Years is the number of years the investor party has investing with Other. (With the company or without the company)."
                     },
                     {
                         "name": "Investment Experience Partnership Years",
-                        "definition": "The Partnership Years is the number of years the investor party has investing with Partnerships. (With LPL or without LPL)."
+                        "definition": "The Partnership Years is the number of years the investor party has investing with Partnerships. (With the company or without the company)."
                     },
                     {
                         "name": "Last Name",
@@ -922,7 +922,7 @@
                     },
                     {
                         "name": "Primary Occupation Description",
-                        "definition": "The Primary Occupation Description is the client's Position or job title at employer selected from a list of LPL supplied values."
+                        "definition": "The Primary Occupation Description is the client's Position or job title at employer selected from a list of the company supplied values."
                     },
                     {
                         "name": "Prior Investment Experience Indicator",
@@ -1122,8 +1122,8 @@
                 ]
             }
         ],
-        "waltz": "http://10.124.192.192:8443/data-types/2",
-        "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59882864897"
+        "waltz": "",
+        "confluence": ""
     },
     {
         "title": "Service Agreement",
@@ -1220,7 +1220,7 @@
                     },
                     {
                         "name": "Introducing Broker Dealer Code",
-                        "definition": "The acronym which delineates between LPL Financial (LPL), Equitable (EQH, previously AXA), and LPL Enterprise (LPE). Also known as Subfirm in the BETA system."
+                        "definition": "The acronym which delineates between the company Financial (the company), Equitable (EQH, previously AXA), and the company Enterprise (LPE). Also known as Subfirm in the BETA system."
                     },
                     {
                         "name": "Investment Objective Label",
@@ -1577,8 +1577,8 @@
                 ]
             }
         ],
-        "waltz": "http://10.124.192.192:8443/data-types/3",
-        "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59882569935"
+        "waltz": "",
+        "confluence": ""
     },
     {
         "title": "Position",
@@ -1612,8 +1612,8 @@
             "Product Classification"
         ],
         "stakeholders": [],
-        "waltz": "http://10.124.192.192:8443/data-types/6",
-        "confluence": "https://lplfinancial.atlassian.net/wiki/spaces/EDIS/pages/59961410270"
+        "waltz": "",
+        "confluence": ""
     },
     {
         "title": "Transaction",
@@ -1634,7 +1634,8 @@
             "Instrument ID",
             "Core Transaction Data"
         ],
-        "waltz": "http://10.124.192.192:8443/data-types/5"
+        "waltz": "",
+        "confluence": ""
     },
     {
         "title": "Account Details",

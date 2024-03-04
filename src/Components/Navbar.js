@@ -7,7 +7,6 @@ function Navbar() {
             <Link to="/roadmap">Roadmap</Link>
             <Link to="/edm">Data Model</Link>
             <Link to="/architecture">Architecture</Link>
-            <Link to="/granite">Project Granite</Link>
             <Link to="/standards">Guides & Standards</Link>
         </div >
     )

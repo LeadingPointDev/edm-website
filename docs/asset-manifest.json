@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/edm-website/static/css/main.571e6339.css",
+    "main.js": "/edm-website/static/js/main.f7127855.js",
+    "index.html": "/edm-website/index.html",
+    "main.571e6339.css.map": "/edm-website/static/css/main.571e6339.css.map",
+    "main.f7127855.js.map": "/edm-website/static/js/main.f7127855.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.571e6339.css",
+    "static/js/main.f7127855.js"
+  ]
+}
